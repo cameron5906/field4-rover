@@ -1,0 +1,8 @@
+.venv/
+.venv_*/
+runtime_windows/
+runtime_windows_*/
+vendor_cache/
+__pycache__/
+*.pyc
+

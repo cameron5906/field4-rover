@@ -1,0 +1,513 @@
+{
+  "source_version": "FIELD4 House Lab v07.3 experimental",
+  "distribution": "public source-only subset",
+  "hash_algorithm": "sha256",
+  "note": "This manifest excludes itself. Original home scene and runtime history are not distributed.",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 558,
+      "sha256": "ae82864ffa6799296105b7cea34d41b601a14bd44c99f5ff5d319c4518d7fec9"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5802,
+      "sha256": "e8d9bb01d68f9c6f76507968ea9526e8499122e71701bca6cbf959f9d4a40ae1"
+    },
+    {
+      "path": "assets/camera_profiles.json",
+      "bytes": 4800,
+      "sha256": "fdde99afd501b5caf2118ecf9f997586c0742d8777cc959e17c6f0c978d80e8e"
+    },
+    {
+      "path": "assets/textures/README.md",
+      "bytes": 315,
+      "sha256": "5dc1f39b2315e074d8a37c5c5443929e82a76bc5844a6e2b3291a52721610d7c"
+    },
+    {
+      "path": "assets/textures/generate_textures.py",
+      "bytes": 1218,
+      "sha256": "1e498f8bb9c24a17b3e50de09ba47d7b198a60c29b2ca64cd32fd504fd07bacb"
+    },
+    {
+      "path": "contracts/action.schema.json",
+      "bytes": 597,
+      "sha256": "43220b38ec8d68d2f5877834ed33630ef1d2973e41efa2886752b3f9d1fcb28e"
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "bytes": 3070,
+      "sha256": "50fba046ad8fbeb7fc8850c32bf270fbb4a5dcf3a87e7e8721a635fe31499039"
+    },
+    {
+      "path": "docs/HARDWARE_PORTABILITY.md",
+      "bytes": 2332,
+      "sha256": "eda2e9c2edb23466126054104e63965c43c95f6d25de1e4e0fa16d2ea12bad7f"
+    },
+    {
+      "path": "docs/VERIFICATION.md",
+      "bytes": 3124,
+      "sha256": "1181bc8b3ba18e51d33deba710db93deddd5bf8b5f5c1338ca09e5451cee886a"
+    },
+    {
+      "path": "perception/.gdignore",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "perception/.gitignore",
+      "bytes": 86,
+      "sha256": "9f78162851973b675afefa09090b851786e5aa93a1c232958cefdba7dc6b507d"
+    },
+    {
+      "path": "perception/benchmark_compute.py",
+      "bytes": 10936,
+      "sha256": "2efefd7f5c24ed477f256de6a24bf70b6ee3508aedb906d133488ba967d0824c"
+    },
+    {
+      "path": "perception/build_windows_runtime.py",
+      "bytes": 4294,
+      "sha256": "f1e35e7e2116d7fded4a84ea0ca6c1a8b780bb05d8233c059c61a6b325404a4b"
+    },
+    {
+      "path": "perception/compute_profile.py",
+      "bytes": 16502,
+      "sha256": "dfb34046b26d27404d5d2a268d143133d9108971f40bfd9859f366b2322e7d7e"
+    },
+    {
+      "path": "perception/download_models.py",
+      "bytes": 1573,
+      "sha256": "99250d20b8e9198c9b42f4f44c81d42c57c393acdc436a6561680336f65570ca"
+    },
+    {
+      "path": "perception/evaluate_frames.py",
+      "bytes": 5231,
+      "sha256": "1f8b09b68101f5b8e865082fc6615eccf94b7bd9475ee76ffbb6ae5b9faa1f16"
+    },
+    {
+      "path": "perception/gesture.py",
+      "bytes": 1221,
+      "sha256": "fa433527913d30fe8a0742831fda3e24fe5df760034656110e17706d3389e790"
+    },
+    {
+      "path": "perception/landmarks.py",
+      "bytes": 15838,
+      "sha256": "18f62cbac92d50af0aaa17ff8352ea53c45bdc95e9c74b68fee9199fc02aa476"
+    },
+    {
+      "path": "perception/linux_artifacts.json",
+      "bytes": 5934,
+      "sha256": "92ec308d92f96a413ad99d8e29e0ac0871d0c02d479d0e117aa0a8e17f64c1f3"
+    },
+    {
+      "path": "perception/model_provenance.json",
+      "bytes": 591,
+      "sha256": "15c337540902c85aea80d90e34da4516ea77c367cc1af16cfcac66c4cdaa33f9"
+    },
+    {
+      "path": "perception/person_detector_bridge.py",
+      "bytes": 10172,
+      "sha256": "f22d883dc50bc95e13c580cd1ac1e5c1f514dcc9217e3a1a359bc295437abf00"
+    },
+    {
+      "path": "perception/person_evidence.py",
+      "bytes": 7937,
+      "sha256": "09af2c871db0250838f157c0db1c07ec89482e274d2049ba90a577173a19c6a4"
+    },
+    {
+      "path": "perception/person_tracking.py",
+      "bytes": 13433,
+      "sha256": "d08dab3881f6b8f46ed81eca9d909329b98649ae17582835f95cdaf66a46e458"
+    },
+    {
+      "path": "perception/pose_model_provenance.json",
+      "bytes": 563,
+      "sha256": "a01564df24866a31ec56295edd013cd6f5b1c6fe70be121667cedc3d7a800577"
+    },
+    {
+      "path": "perception/probe_runtime.py",
+      "bytes": 5419,
+      "sha256": "a46272e1a97aec0164babe05b9e39f0dd81cbae443a949c07fab6afe9d1c4e60"
+    },
+    {
+      "path": "perception/profiles/native.json",
+      "bytes": 499,
+      "sha256": "d39687d949c416dae6ab9538b7da2604542bc5c6d1b533cca6590b1302760c0b"
+    },
+    {
+      "path": "perception/profiles/pi4_budget.json",
+      "bytes": 471,
+      "sha256": "fa66d1f26c230d74b82414033a2a5f025f8324e3dbf9bf19e02b212e5af9ada8"
+    },
+    {
+      "path": "perception/profiles/pi4_stress.json",
+      "bytes": 485,
+      "sha256": "6255dbbcfc775ba12f0df4f7876d9c3a7e0868ba556db3920a5ebdb2eaad0119"
+    },
+    {
+      "path": "perception/requirements-linux.lock",
+      "bytes": 1804,
+      "sha256": "e455597b5e81cde2dd7e11b1505c391a98637698f7458e72b49d968f67084a06"
+    },
+    {
+      "path": "perception/requirements-windows.lock",
+      "bytes": 1806,
+      "sha256": "7373b3146904e0a22266f8d2d77fee6e23eb07aaf23efb715c6a6d9695d42499"
+    },
+    {
+      "path": "perception/requirements.txt",
+      "bytes": 324,
+      "sha256": "1c2b188d82d994db937db489dd59d499e847c922a3f18d34e54fbf06bb17c290"
+    },
+    {
+      "path": "perception/setup_linux.sh",
+      "bytes": 547,
+      "sha256": "f87281473fd66a591d065f691a1ae37986566df4ce8098dc5e49d353333f27b8"
+    },
+    {
+      "path": "perception/test_runtime_packaging.py",
+      "bytes": 4060,
+      "sha256": "1bad34ccff6f76d39c4ad9694626cd249708423ac6dab08b801ca14cae32b674"
+    },
+    {
+      "path": "perception/tests/analyze_attitude_capture.py",
+      "bytes": 4883,
+      "sha256": "939ce44c89df85b04da3df0eabd1851ba9e52aa19d7948f9b57a2fca2da6102b"
+    },
+    {
+      "path": "perception/tests/compare_live_fusion_replay.py",
+      "bytes": 3395,
+      "sha256": "77c8faa7ef9e8dcffe355c076a2227a6801fa32e71076a746848af3edf77b8ae"
+    },
+    {
+      "path": "perception/tests/evaluate_detector_bridge_capture.py",
+      "bytes": 5027,
+      "sha256": "11f482fc11835897d65b4426b95d321c620d1fb57b0d113a52719cf2cb0d2699"
+    },
+    {
+      "path": "perception/tests/evaluate_tracking_frames.py",
+      "bytes": 3331,
+      "sha256": "0da1b1268feab13dc027530a65f8bd0d4fbb5b9b0b08f7fa1d50dd1732124808"
+    },
+    {
+      "path": "perception/tests/make_synthetic_replay.py",
+      "bytes": 1716,
+      "sha256": "5111651e8ecab665dcb0954eb5ae17ced74e03d473b71461336fe2f995d180de"
+    },
+    {
+      "path": "perception/tests/replay_person_tracking.py",
+      "bytes": 5398,
+      "sha256": "b18770d4a5ab19fc39ca22ae6a96afe1319db73d5112a55477a6e91414aa54d1"
+    },
+    {
+      "path": "perception/tests/replay_rendered_capture.py",
+      "bytes": 3161,
+      "sha256": "0f797000d298a7515f6bc47561f98e43f22ab8a1dbc6cf436163dd293d2f1751"
+    },
+    {
+      "path": "perception/tests/test_lidar_sampling.py",
+      "bytes": 3678,
+      "sha256": "fdff9743675efca7f34564ef6699b5b09ae51a684e1099c91c46b1e49e891438"
+    },
+    {
+      "path": "perception/tests/test_person_detector_bridge.py",
+      "bytes": 7752,
+      "sha256": "fbb095944365f35c1ed8f8c3a9905d36c2560d31c57bdb3a592319a3105af5ab"
+    },
+    {
+      "path": "perception/tests/test_person_tracking.py",
+      "bytes": 19320,
+      "sha256": "37459bf4256f3120202046d30a49c85387c8bd66feb50ed71ee1f97e3a6c673b"
+    },
+    {
+      "path": "perception/tests/test_replay_capture.py",
+      "bytes": 2294,
+      "sha256": "6526520e87247979e4fd5676b404635aad900bf7be334d0962d5e09e4976f6d5"
+    },
+    {
+      "path": "perception/tests/test_worker_person_contract.py",
+      "bytes": 7684,
+      "sha256": "46f6f410665d0451a30b89d84feb1380d0c1b2cb3a3c9494ee280ab2cf6cbe10"
+    },
+    {
+      "path": "perception/verify_windows_runtime.cmd",
+      "bytes": 462,
+      "sha256": "5642d7b4f5b3a233ed26501e64aaa1f067e19a6d229c03e795992da9b17b8db6"
+    },
+    {
+      "path": "perception/windows_runtime_manifest.json",
+      "bytes": 7676,
+      "sha256": "280a385d0456c175e55dec935a46e6670f86d97f7f0ba18ae1b0b3d1f7e4efa2"
+    },
+    {
+      "path": "perception/worker.py",
+      "bytes": 15185,
+      "sha256": "68344cbb81030ee92830b98100a712d3cc793c702f8445cc2f53b4187f75576a"
+    },
+    {
+      "path": "physics/attitude_estimator.gd",
+      "bytes": 10323,
+      "sha256": "7241b616b6ef7831514c77800d32c44f8a85121c95ffb98a3462ee57449a9bcc"
+    },
+    {
+      "path": "physics/attitude_estimator.gd.uid",
+      "bytes": 20,
+      "sha256": "6f80ce3d87a3352c8748522290d5a07f13a4c4b47afbd11f3fcb02aa1802091b"
+    },
+    {
+      "path": "physics/cad_mass_audit.json",
+      "bytes": 14140,
+      "sha256": "616315a1c114fec9feacf4aa4c8eb1873911aaa8f4fe33479a3abe5a9df61573"
+    },
+    {
+      "path": "physics/drive_dynamics.gd",
+      "bytes": 5615,
+      "sha256": "cb07d714cfdb7f8ed117ad4e7f9ac59af0eb82bc78113e47a90d63b49b25378b"
+    },
+    {
+      "path": "physics/drive_dynamics.gd.uid",
+      "bytes": 20,
+      "sha256": "80925bf453398aa1d76733bc9b3b1a225a4a7eabbd55d5c09321c84e39159509"
+    },
+    {
+      "path": "physics/imu_sensor.gd",
+      "bytes": 8207,
+      "sha256": "095b9291b069e68842fd5daf52b22b615e55a6668641cb5cb64824b66ab37a8f"
+    },
+    {
+      "path": "physics/imu_sensor.gd.uid",
+      "bytes": 19,
+      "sha256": "5f4553aede07a80881f0a781de14f38c2da16bde35db29caec9d2b6b2323f244"
+    },
+    {
+      "path": "physics/physics_estimates.json",
+      "bytes": 45224,
+      "sha256": "b5a38c111f4943acd6ec6c35fca012398dd664a6636f1dc4129d1a8e4bfb7c62"
+    },
+    {
+      "path": "physics/rigid_wheel_contacts.gd",
+      "bytes": 7664,
+      "sha256": "8dc675196a05e000ae073e3a24afac08c2908fc811b80e9b5c15f869829a23df"
+    },
+    {
+      "path": "physics/rigid_wheel_contacts.gd.uid",
+      "bytes": 20,
+      "sha256": "c3937ec27e883ec89f0ab8ea4b7ac26f55d48dfd1e2cfbc97e1f1c0ffe92cb05"
+    },
+    {
+      "path": "project.godot",
+      "bytes": 365,
+      "sha256": "015fd9f3f380b1ce39212799066c526298b9802c85a7d66ca1d6c049d502f70e"
+    },
+    {
+      "path": "scripts/decisions_adapter.gd",
+      "bytes": 7778,
+      "sha256": "e076dfad05d1ad30ba1d9096216cbcc11ab7512e34eb69e062cfc18d9dd72432"
+    },
+    {
+      "path": "scripts/decisions_adapter.gd.uid",
+      "bytes": 19,
+      "sha256": "c6d71a3b49b295049c5e3282af72f4d8c50068e5e45c0d61f6df387d2bbe3ce7"
+    },
+    {
+      "path": "scripts/exploration_memory.gd",
+      "bytes": 12814,
+      "sha256": "2c882b7469e133251314911412bc4b65a34a0b8801d64661cb0e39b0663624b8"
+    },
+    {
+      "path": "scripts/exploration_memory.gd.uid",
+      "bytes": 20,
+      "sha256": "3260565c9d1acf5929432d6352d12ece9f6024208592c558cfc31cbc7f7d2008"
+    },
+    {
+      "path": "scripts/gesture_guard.gd",
+      "bytes": 7065,
+      "sha256": "d21d34625d77f09f7212441f345673c0bae7829ecb091bc6c9f82100a0247867"
+    },
+    {
+      "path": "scripts/gesture_guard.gd.uid",
+      "bytes": 20,
+      "sha256": "46cc34a6f088139d470619642ee38b7e08f61a5104c81c83cec12850f128f56e"
+    },
+    {
+      "path": "scripts/grid_motion.gd",
+      "bytes": 5205,
+      "sha256": "c544b55f9cdbad53f390dc08feb5f90ff34a8cc6520c0624093fd87afdf728dc"
+    },
+    {
+      "path": "scripts/grid_motion.gd.uid",
+      "bytes": 20,
+      "sha256": "9fbe48056034292315a9c1f3fde4ab948cad297b997f56dbf4ad5d5ca665592b"
+    },
+    {
+      "path": "scripts/landmark_task.gd",
+      "bytes": 18125,
+      "sha256": "b97305ce701db926d697d5f016a2de07a2bd18024116782c1f68bbe65bf3008a"
+    },
+    {
+      "path": "scripts/landmark_task.gd.uid",
+      "bytes": 20,
+      "sha256": "a2c98576f20cf1224e0347e5442594cd7e971da2cd19e87e454fa240735af760"
+    },
+    {
+      "path": "scripts/lidar_plot.gd",
+      "bytes": 3042,
+      "sha256": "ad3e64cce44106ccf82946c229d21ceba7ff214dc2fb8cfa99de8994a7e51e34"
+    },
+    {
+      "path": "scripts/lidar_plot.gd.uid",
+      "bytes": 19,
+      "sha256": "4a4ce27afa33f0ae90da6a273e4b4d9b2f3cb372ea5b39688af003022ab6ae13"
+    },
+    {
+      "path": "scripts/lidar_sampling.gd",
+      "bytes": 3985,
+      "sha256": "b0225b0d6ff26b53c2e3322896b521851b03c45cb73cf5a377148169abe65a72"
+    },
+    {
+      "path": "scripts/lidar_sampling.gd.uid",
+      "bytes": 19,
+      "sha256": "f94332b164df40fca14aae51a17d06e44c2c08ae3ce84d1b6f4b2181b1f6242f"
+    },
+    {
+      "path": "scripts/map_overlay.gd",
+      "bytes": 2697,
+      "sha256": "76517ce31253801ad7022e45224728e3a3a68b328dcd190ba48d2f40af82660b"
+    },
+    {
+      "path": "scripts/map_overlay.gd.uid",
+      "bytes": 20,
+      "sha256": "9d1614e4b898efdd54879b3d41ec573beedc647406cb0dad770d83610621a61c"
+    },
+    {
+      "path": "scripts/mapping.gd",
+      "bytes": 12024,
+      "sha256": "ceac6111afe99914eddf6d448b6aebb9665775b3b4822a5a03a28fcff8509bc6"
+    },
+    {
+      "path": "scripts/mapping.gd.uid",
+      "bytes": 20,
+      "sha256": "9381c32d210de23fe12c828780521f13759ba5af203ffe284be70041ec222140"
+    },
+    {
+      "path": "scripts/perception_client.gd",
+      "bytes": 9716,
+      "sha256": "7d2f6b29d4a72dd210230cc08e8599f464bcc290319b9e4cd33b09d519f46361"
+    },
+    {
+      "path": "scripts/perception_client.gd.uid",
+      "bytes": 20,
+      "sha256": "6705727a50257aaccbb45a3ec12b841c32dbf517e405ce33f7195ff635f8681f"
+    },
+    {
+      "path": "scripts/perception_overlay.gd",
+      "bytes": 2061,
+      "sha256": "656712e3dd30e30fd466098470533c82bf20e7c2d9e0d1ace9cf07922761efda"
+    },
+    {
+      "path": "scripts/perception_overlay.gd.uid",
+      "bytes": 19,
+      "sha256": "39ec0c38c89879a556acfff913c60c05b0ed3f34b60e5ca50777c1578bcf161f"
+    },
+    {
+      "path": "scripts/person_follow.gd",
+      "bytes": 23368,
+      "sha256": "2e96edbd596f4c3843c4dfffd5c45435638a9852c3d17f2ff803f8b70bd716b5"
+    },
+    {
+      "path": "scripts/person_follow.gd.uid",
+      "bytes": 20,
+      "sha256": "e2b9075fb3270594ad4bce167e4e016c8cce77c15b645089232276e252f8243e"
+    },
+    {
+      "path": "scripts/recognizable_chair.gd",
+      "bytes": 4093,
+      "sha256": "dfb5e946dc7b21f80a9e5646725cbfc3b913b97632018573a4b88f14e4826f65"
+    },
+    {
+      "path": "scripts/recognizable_chair.gd.uid",
+      "bytes": 20,
+      "sha256": "a68ee995361cde4a36013a7f49acb2d8e0ad77324e742ea1f1994ef1edcadb9b"
+    },
+    {
+      "path": "scripts/scan_matcher.gd",
+      "bytes": 16025,
+      "sha256": "35748d8c0bc259e56b598e13030e0d83d600ba1d8894fcd424e9caa9e17e56fd"
+    },
+    {
+      "path": "scripts/scan_matcher.gd.uid",
+      "bytes": 20,
+      "sha256": "0ad6fd3e72a512c896ef9fafcddbd57664b40d25db1706551ba4d6a2133aafe1"
+    },
+    {
+      "path": "scripts/semantic_planner.gd",
+      "bytes": 48559,
+      "sha256": "b9eadf26ea1a7a8a52d196c97a5e240fbf9f81559b92a2937835c8c1fe51842f"
+    },
+    {
+      "path": "scripts/semantic_planner.gd.uid",
+      "bytes": 19,
+      "sha256": "eee4615c5b64577cc861487252cdc1ea3004c9a783bfdf98ecf76c57c70f2d6f"
+    },
+    {
+      "path": "tests/build_follow_contract_fixture_v073.py",
+      "bytes": 10082,
+      "sha256": "78c941360047c225d4e80b4224e3fd42fb78514e25eb5ab3315b7f27fc6bd193"
+    },
+    {
+      "path": "tests/test_attitude_estimator_v073.gd",
+      "bytes": 10715,
+      "sha256": "f4feec09e013570b8aeb0e447c03bb2699f7752c91da578fa3890779fe28974d"
+    },
+    {
+      "path": "tests/test_attitude_estimator_v073.gd.uid",
+      "bytes": 20,
+      "sha256": "b67f781f57a1bbac5912caa3aa7a5a0adaf4f5c5ba6ad7ef49960cbc88f8dfd5"
+    },
+    {
+      "path": "tests/test_exploration_memory.gd",
+      "bytes": 19783,
+      "sha256": "4d410716542f2845e97a43de59e24de42885e5b6e9142d4971b1199926b1efa9"
+    },
+    {
+      "path": "tests/test_exploration_memory.gd.uid",
+      "bytes": 19,
+      "sha256": "1dacf39583cc9cd60da52b2174d57451a51ad0fb6c876d0b456e104b5b05f1ce"
+    },
+    {
+      "path": "tests/test_follow_tracker_contract_v073.gd",
+      "bytes": 2986,
+      "sha256": "6fc8a63f12a8c5aa55dbf1ed0656bd364dbc312fe98fe7a137c98ccac2c49907"
+    },
+    {
+      "path": "tests/test_follow_tracker_contract_v073.gd.uid",
+      "bytes": 20,
+      "sha256": "7e0aff21944b660cbe446ce21144f9a309aaa9a14accf06f3a20f0136552f071"
+    },
+    {
+      "path": "tests/test_perception_capture_cadence_v073.gd",
+      "bytes": 4277,
+      "sha256": "f09736a90280ba7b68d8b722f39a87f98333283b434ae8964b8ac875130eee40"
+    },
+    {
+      "path": "tests/test_perception_capture_cadence_v073.gd.uid",
+      "bytes": 20,
+      "sha256": "26c968f6022837678f20799abdd3c097f1faacf4743a834b1ab11878c6f4064a"
+    },
+    {
+      "path": "tests/test_room_search_integration.gd",
+      "bytes": 5439,
+      "sha256": "9fa28a1f53035f3604506c7adb5b0c8052003e22fc1bf5220f8fe449ef3c6dc1"
+    },
+    {
+      "path": "tests/test_room_search_integration.gd.uid",
+      "bytes": 18,
+      "sha256": "1cd5d0a10358c728f70d4e9919d44c928d9e19fa195296e8c0af8d05be899fe8"
+    },
+    {
+      "path": "third_party/DEPENDENCIES.md",
+      "bytes": 1798,
+      "sha256": "68d4f22d7212332f282f6f0adfaa61bd2f4936ea50b4851177ce022124c0ee0c"
+    }
+  ]
+}

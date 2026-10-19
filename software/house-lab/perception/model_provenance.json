@@ -1,0 +1,11 @@
+{
+  "name": "EfficientDet-Lite0 INT8",
+  "version": "1",
+  "source": "https://storage.googleapis.com/mediapipe-models/object_detector/efficientdet_lite0/int8/1/efficientdet_lite0.tflite",
+  "documentation": "https://ai.google.dev/edge/mediapipe/solutions/vision/object_detector",
+  "sha256": "0720bf247bd76e6594ea28fa9c6f7c5242be774818997dbbeffc4da460c723bb",
+  "bytes": 4602795,
+  "input": "320x320 RGB; MediaPipe preserves input coordinates when resizing/padding internally",
+  "training": "COCO object classes; no FIELD4 scene training or calibration",
+  "downloaded_utc": "2026-10-11"
+}

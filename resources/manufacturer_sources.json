@@ -1,0 +1,110 @@
+[
+  {
+    "id": "S1",
+    "title": "DFRobot FIT0185 motor specification",
+    "url": "https://wiki.dfrobot.com/fit0185/",
+    "scope": "12 V motor; 7 A stall; 5 V Hall encoder supply; manufacturer CPR label."
+  },
+  {
+    "id": "S2",
+    "title": "Pololu #4035 carrier",
+    "url": "https://www.pololu.com/product/4035",
+    "scope": "Carrier current capability, interfaces and thermal limits; use detailed #4035 section."
+  },
+  {
+    "id": "S3",
+    "title": "Pololu carrier schematic",
+    "url": "https://www.pololu.com/file/0J1862/drv887x-single-brushed-dc-motor-driver-carrier-schematic.pdf",
+    "scope": "10 k\u03a9 SLEEP-to-VREF and 2.49 k\u03a9 CS network; actual board nets."
+  },
+  {
+    "id": "S4",
+    "title": "Texas Instruments DRV8874 datasheet",
+    "url": "https://www.ti.com/lit/ds/symlink/drv8874.pdf",
+    "scope": "PH/EN, IMODE, nSLEEP, current regulation, fault behavior and analogue sensing."
+  },
+  {
+    "id": "S5",
+    "title": "Raspberry Pi Pico original pinout",
+    "url": "https://datasheets.raspberrypi.com/pico/Pico-R3-A4-Pinout.pdf",
+    "scope": "Physical header pins and GPIO functions; independently visually checked."
+  },
+  {
+    "id": "S6",
+    "title": "Raspberry Pi Pico documentation",
+    "url": "https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html",
+    "scope": "Board variants, 3.3 V logic, GPIO/ADC and power constraints."
+  },
+  {
+    "id": "S7",
+    "title": "Raspberry Pi hardware / power",
+    "url": "https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#power-supply",
+    "scope": "Pi 4 recommended supply and combined USB power allowance."
+  },
+  {
+    "id": "S8",
+    "title": "Raspberry Pi UART configuration",
+    "url": "https://www.raspberrypi.com/documentation/computers/configuration.html#configure-uarts",
+    "scope": "3.3 V UART warning, header pins and console/Bluetooth configuration."
+  },
+  {
+    "id": "S9",
+    "title": "Arducam B0309 / IMX708 family",
+    "url": "https://docs.arducam.com/Raspberry-Pi-Camera/Native-camera/12MP-IMX708/",
+    "scope": "Exact camera SKU, CSI-2, fixed focus, focus distance and field of view."
+  },
+  {
+    "id": "S10",
+    "title": "WitMotion WT901 current manual",
+    "url": "https://cdn.shopify.com/s/files/1/0601/1712/3269/files/WT901_Manual.pdf?v=1770278406",
+    "scope": "Manufacturer-linked manual V250806: supply, TTL serial, rates and pin names."
+  },
+  {
+    "id": "S11",
+    "title": "SLAMTEC A1 official specification",
+    "url": "https://www.slamtec.com/en/lidar/a1spec",
+    "scope": "A1 5 V system and serial interface; confirm actual sensor revision."
+  },
+  {
+    "id": "S12",
+    "title": "SLAMTEC official documents / SDK",
+    "url": "https://www.slamtec.com/en/support",
+    "scope": "A1M8 datasheet and development-kit manual links; use matching adapter revision."
+  },
+  {
+    "id": "S13",
+    "title": "TI SN74LVC541A buffer",
+    "url": "https://www.ti.com/product/SN74LVC541A",
+    "scope": "5.5 V-tolerant inputs at 3.3 V VCC; Ioff; two output-enable inputs."
+  },
+  {
+    "id": "S14",
+    "title": "TI SN74LVC1G11 AND gate",
+    "url": "https://www.ti.com/product/SN74LVC1G11",
+    "scope": "3-input gate, 3.3 V operation and partial-power-down behavior."
+  },
+  {
+    "id": "S15",
+    "title": "TI motor-drive regeneration discussion",
+    "url": "https://www.ti.com/lit/pdf/ssztch8",
+    "scope": "Supply pumping and returning motor energy."
+  },
+  {
+    "id": "S16",
+    "title": "TI motor-driver braking-circuit guidance",
+    "url": "https://www.ti.com/lit/an/slvaf66/slvaf66.pdf",
+    "scope": "Braking energy and protective circuit design."
+  },
+  {
+    "id": "S17",
+    "title": "DFRobot encoder example",
+    "url": "https://wiki.dfrobot.com/fit0185/docs/24358",
+    "scope": "Example counts A CHANGE; does not resolve full decoder CPR conversion."
+  },
+  {
+    "id": "S18",
+    "title": "Pilz E-stop restart explanation",
+    "url": "https://www.pilz.com/en-INT/support/faq/standards/articles/180045",
+    "scope": "Reset must not itself restart machinery; design principle, not certification."
+  }
+]

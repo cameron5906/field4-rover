@@ -1,0 +1,14 @@
+; Modules-only public source subset. No application launch scene is included.
+config_version=5
+
+[application]
+config/name="FIELD4 reusable modules"
+config/version="0.7.3-public-source-subset"
+config/features=PackedStringArray("4.6")
+
+[physics]
+common/physics_ticks_per_second=120
+3d/default_gravity=9.80665
+
+[rendering]
+renderer/rendering_method="gl_compatibility"

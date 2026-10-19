@@ -1,0 +1,162 @@
+{
+  "schema_version": 1,
+  "default_profile": "arducam_b0309",
+  "mount_position_godot_m": [
+    0,
+    0.133,
+    -0.1078
+  ],
+  "mount_calibrated": false,
+  "profiles": [
+    {
+      "id": "arducam_b0309",
+      "label": "Arducam IMX708 102\u00b0 fixed focus",
+      "hfov_deg": 102,
+      "native_resolution": [
+        4608,
+        2592
+      ],
+      "stream_resolution": [
+        640,
+        360
+      ],
+      "focus_type": "fixed",
+      "calibration_status": "uncalibrated",
+      "source": "https://www.arducam.com/presalearducam-12mp-imx708-102-degree-wide-angle-fixed-focus-hdr-high-snr-camera-module-for-raspberry-pi.html",
+      "manufacturer_vfov_deg": 67,
+      "pinhole_vfov_deg": 69.5699795961589,
+      "projection": "rectilinear_pinhole_hfov_priority",
+      "crop": "full_frame_downsample_assumption",
+      "hardware_identity_confirmed_by_user": true,
+      "sku_evidence": "Product title matches manufacturer B0309; physical label not inspected",
+      "focal_length_mm": 2.75,
+      "f_number": 2.2,
+      "manufacturer_focus_range_m": [
+        1.5,
+        null
+      ],
+      "focus_range_note": "1.5 m to infinity; near-field blur is not simulated",
+      "ir_cut": true,
+      "sensor_shutter": "rolling",
+      "manufacturer_video_modes": [
+        {
+          "resolution": [
+            2304,
+            1296
+          ],
+          "max_fps": 56,
+          "hdr": false
+        },
+        {
+          "resolution": [
+            2304,
+            1296
+          ],
+          "max_fps": 30,
+          "hdr": true
+        },
+        {
+          "resolution": [
+            1536,
+            864
+          ],
+          "max_fps": 120,
+          "hdr": false
+        }
+      ],
+      "simulation_hdr_enabled": false
+    },
+    {
+      "id": "pi_camera_3_standard",
+      "label": "Raspberry Pi Camera Module 3 standard",
+      "hfov_deg": 66,
+      "native_resolution": [
+        4608,
+        2592
+      ],
+      "stream_resolution": [
+        640,
+        360
+      ],
+      "focus_type": "autofocus",
+      "calibration_status": "uncalibrated",
+      "source": "https://www.raspberrypi.com/documentation/accessories/camera.html",
+      "manufacturer_vfov_deg": 41,
+      "pinhole_vfov_deg": 40.13366538082553,
+      "projection": "rectilinear_pinhole_hfov_priority",
+      "crop": "full_frame_downsample_assumption",
+      "hardware_identity_confirmed_by_user": false
+    },
+    {
+      "id": "pi_camera_3_wide",
+      "label": "Raspberry Pi Camera Module 3 Wide",
+      "hfov_deg": 102,
+      "native_resolution": [
+        4608,
+        2592
+      ],
+      "stream_resolution": [
+        640,
+        360
+      ],
+      "focus_type": "autofocus",
+      "calibration_status": "uncalibrated",
+      "source": "https://www.raspberrypi.com/documentation/accessories/camera.html",
+      "manufacturer_vfov_deg": 67,
+      "pinhole_vfov_deg": 69.5699795961589,
+      "projection": "rectilinear_pinhole_hfov_priority",
+      "crop": "full_frame_downsample_assumption",
+      "hardware_identity_confirmed_by_user": false
+    },
+    {
+      "id": "pi_camera_2",
+      "label": "Raspberry Pi Camera Module 2",
+      "hfov_deg": 62.2,
+      "native_resolution": [
+        3280,
+        2464
+      ],
+      "stream_resolution": [
+        820,
+        616
+      ],
+      "focus_type": "manually_adjustable",
+      "calibration_status": "uncalibrated",
+      "source": "https://www.raspberrypi.com/documentation/accessories/camera.html",
+      "manufacturer_vfov_deg": 48.8,
+      "pinhole_vfov_deg": 48.75670027530797,
+      "projection": "rectilinear_pinhole_hfov_priority",
+      "crop": "full_frame_downsample_assumption",
+      "hardware_identity_confirmed_by_user": false
+    },
+    {
+      "id": "uncalibrated_75",
+      "label": "Uncalibrated generic camera",
+      "hfov_deg": 75,
+      "native_resolution": null,
+      "stream_resolution": [
+        640,
+        360
+      ],
+      "focus_type": "unknown",
+      "calibration_status": "uncalibrated",
+      "source": null,
+      "manufacturer_vfov_deg": null,
+      "pinhole_vfov_deg": 46.69212571046592,
+      "projection": "rectilinear_pinhole_hfov_priority",
+      "crop": "full_frame_downsample_assumption",
+      "hardware_identity_confirmed_by_user": false
+    }
+  ],
+  "quality_model": {
+    "rendering": "Godot scene lighting and tone mapping; not calibrated sensor response",
+    "optical_distortion": "not simulated; no calibration coefficients",
+    "autofocus": "not simulated",
+    "defocus_blur": "not simulated",
+    "rolling_shutter": "not simulated",
+    "sensor_noise": "not simulated",
+    "exposure_and_white_balance": "not calibrated to hardware",
+    "hdr": "hardware capability only; not reproduced by renderer",
+    "frame_rate": "render/application cadence, not hardware sensor timing"
+  }
+}

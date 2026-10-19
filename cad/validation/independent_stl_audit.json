@@ -1,0 +1,462 @@
+{
+  "stl/conditional/B06_camera_fork.stl": {
+    "triangles": 2172,
+    "file_length_valid": true,
+    "edges_not_used_twice": 0,
+    "degenerate_triangles": 0,
+    "signed_volume_mm3": 14729.9885,
+    "bounds_mm": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        30.0,
+        62.0,
+        30.0
+      ]
+    ],
+    "sha256": "b0683b6302faa6bc03fab8c3e28e14d6e09529d88aed4499ecf48d0b2359bc8e"
+  },
+  "stl/conditional/B07_camera_carrier.stl": {
+    "triangles": 2200,
+    "file_length_valid": true,
+    "edges_not_used_twice": 0,
+    "degenerate_triangles": 0,
+    "signed_volume_mm3": 10010.8851,
+    "bounds_mm": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        29.0,
+        47.200001,
+        12.0
+      ]
+    ],
+    "sha256": "d366ab2dd3ea673e0c4f612c651ad730f5b1423e259d6d725f69fb9744b2336b"
+  },
+  "stl/conditional/B10_motor_mount_FL.stl": {
+    "triangles": 4730,
+    "file_length_valid": true,
+    "edges_not_used_twice": 0,
+    "degenerate_triangles": 0,
+    "signed_volume_mm3": 26891.0991,
+    "bounds_mm": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        56.0,
+        34.0,
+        54.0
+      ]
+    ],
+    "sha256": "449a224bd59687cd85eeafe5c83123e4e3a3430186c851dd55c90d2a3bfd3827"
+  },
+  "stl/conditional/B10_motor_mount_FR.stl": {
+    "triangles": 4738,
+    "file_length_valid": true,
+    "edges_not_used_twice": 0,
+    "degenerate_triangles": 0,
+    "signed_volume_mm3": 26891.0991,
+    "bounds_mm": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        56.0,
+        34.0,
+        54.0
+      ]
+    ],
+    "sha256": "c48c84eaf4772908f63949a84156a94966153437a97c9c8f9be6d603e7fdff23"
+  },
+  "stl/conditional/B10_motor_mount_RL.stl": {
+    "triangles": 4730,
+    "file_length_valid": true,
+    "edges_not_used_twice": 0,
+    "degenerate_triangles": 0,
+    "signed_volume_mm3": 26891.0991,
+    "bounds_mm": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        56.0,
+        34.0,
+        54.0
+      ]
+    ],
+    "sha256": "449a224bd59687cd85eeafe5c83123e4e3a3430186c851dd55c90d2a3bfd3827"
+  },
+  "stl/conditional/B10_motor_mount_RR.stl": {
+    "triangles": 4738,
+    "file_length_valid": true,
+    "edges_not_used_twice": 0,
+    "degenerate_triangles": 0,
+    "signed_volume_mm3": 26891.0991,
+    "bounds_mm": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        56.0,
+        34.0,
+        54.0
+      ]
+    ],
+    "sha256": "c48c84eaf4772908f63949a84156a94966153437a97c9c8f9be6d603e7fdff23"
+  },
+  "stl/conditional/C16_controller_hanger_front.stl": {
+    "triangles": 2108,
+    "file_length_valid": true,
+    "edges_not_used_twice": 0,
+    "degenerate_triangles": 0,
+    "signed_volume_mm3": 11413.6162,
+    "bounds_mm": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        71.0,
+        19.199997,
+        24.000006
+      ]
+    ],
+    "sha256": "8f888eb638aa2e38f7f460042e8cdf2099028e5f08e0efe5ef58b6b8860d54fd"
+  },
+  "stl/conditional/C16_controller_hanger_rear.stl": {
+    "triangles": 2108,
+    "file_length_valid": true,
+    "edges_not_used_twice": 0,
+    "degenerate_triangles": 0,
+    "signed_volume_mm3": 11413.6148,
+    "bounds_mm": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        71.0,
+        19.199997,
+        24.000006
+      ]
+    ],
+    "sha256": "f49f7aaa97e9d459c5f40b9e9758761558b8540526667e4b0c7af95b30877459"
+  },
+  "stl/coupons/T01_motor_face_coupon.stl": {
+    "triangles": 3524,
+    "file_length_valid": true,
+    "edges_not_used_twice": 0,
+    "degenerate_triangles": 0,
+    "signed_volume_mm3": 9085.9328,
+    "bounds_mm": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        45.0,
+        46.0,
+        5.000003
+      ]
+    ],
+    "sha256": "fc733945a2b3ce28281a1fd6d3338760c5a946149a5d7666b93c5d00eee5d0dc"
+  },
+  "stl/coupons/T02_fastener_clearance_coupon.stl": {
+    "triangles": 2914,
+    "file_length_valid": true,
+    "edges_not_used_twice": 0,
+    "degenerate_triangles": 0,
+    "signed_volume_mm3": 13951.9407,
+    "bounds_mm": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        84.0,
+        30.0,
+        6.0
+      ]
+    ],
+    "sha256": "b4fed7b5ff6c0fd42fa3f82be38656902bcbb56e07461f3b3b133d21056eb443"
+  },
+  "stl/coupons/T03_bracket_floor_coupon.stl": {
+    "triangles": 1228,
+    "file_length_valid": true,
+    "edges_not_used_twice": 0,
+    "degenerate_triangles": 0,
+    "signed_volume_mm3": 8201.9462,
+    "bounds_mm": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        56.0,
+        34.0,
+        4.5
+      ]
+    ],
+    "sha256": "ffcde3528217bf1eb39af3ea1970e587ee64aab00575871a807ee409ffa4126d"
+  },
+  "stl/coupons/T04_camera_pattern_coupon.stl": {
+    "triangles": 1260,
+    "file_length_valid": true,
+    "edges_not_used_twice": 0,
+    "degenerate_triangles": 0,
+    "signed_volume_mm3": 2978.8922,
+    "bounds_mm": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        36.0,
+        30.0,
+        3.0
+      ]
+    ],
+    "sha256": "6d88d218fc1cc7f9206987c29ac4060f4350c055634805032b86ecd844588413"
+  },
+  "stl/coupons/T05_M3_captive_nut_coupon.stl": {
+    "triangles": 724,
+    "file_length_valid": true,
+    "edges_not_used_twice": 0,
+    "degenerate_triangles": 0,
+    "signed_volume_mm3": 1862.4377,
+    "bounds_mm": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        12.0,
+        12.0,
+        15.0
+      ]
+    ],
+    "sha256": "35bfaad5648a6de7617b68887df370fea2908feeac5a9efd1dd48305b5a73e73"
+  },
+  "stl/coupons/T06_lid_clearance_coupon.stl": {
+    "triangles": 60,
+    "file_length_valid": true,
+    "edges_not_used_twice": 0,
+    "degenerate_triangles": 0,
+    "signed_volume_mm3": 4713.0,
+    "bounds_mm": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        44.0,
+        15.0,
+        8.0
+      ]
+    ],
+    "sha256": "83cb2e2512bfd842fb42c060a45c54a98c6ad38e63f48689586a5ed43debc3d4"
+  },
+  "stl/coupons/T07_lid_tongue_coupon.stl": {
+    "triangles": 28,
+    "file_length_valid": true,
+    "edges_not_used_twice": 0,
+    "degenerate_triangles": 0,
+    "signed_volume_mm3": 1344.0,
+    "bounds_mm": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        28.0,
+        14.0,
+        6.5
+      ]
+    ],
+    "sha256": "6e4e833fa3e9f3be1663197b251293cd56d15776a058a2d98946c325d5d9ce09"
+  },
+  "stl/coupons/T09_A1M8_four_foot_coupon.stl": {
+    "triangles": 1088,
+    "file_length_valid": true,
+    "edges_not_used_twice": 0,
+    "degenerate_triangles": 0,
+    "signed_volume_mm3": 8242.8649,
+    "bounds_mm": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        82.0,
+        68.0,
+        3.0
+      ]
+    ],
+    "sha256": "a34a94f76a60928a12c5f2c3918faba5868e2eb48f3321e9972796f0d25f769c"
+  },
+  "stl/current/B01_lower_tub.stl": {
+    "triangles": 17398,
+    "file_length_valid": true,
+    "edges_not_used_twice": 0,
+    "degenerate_triangles": 0,
+    "signed_volume_mm3": 394834.9618,
+    "bounds_mm": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        196.000015,
+        236.000015,
+        88.5
+      ]
+    ],
+    "sha256": "14fec0011d6627054fe0cc7cbbf3b071ea3dcbe5a0fe0a431693e5f7e411ea0c"
+  },
+  "stl/current/B05_lid_pillar_FL.stl": {
+    "triangles": 1000,
+    "file_length_valid": true,
+    "edges_not_used_twice": 0,
+    "degenerate_triangles": 0,
+    "signed_volume_mm3": 4818.655,
+    "bounds_mm": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        12.0,
+        12.0,
+        38.0
+      ]
+    ],
+    "sha256": "f256671047200bf8741b21b355983d28efbd6af46891d58cb3ffbc03caa7fca8"
+  },
+  "stl/current/B05_lid_pillar_FR.stl": {
+    "triangles": 1000,
+    "file_length_valid": true,
+    "edges_not_used_twice": 0,
+    "degenerate_triangles": 0,
+    "signed_volume_mm3": 4818.655,
+    "bounds_mm": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        12.0,
+        12.0,
+        38.0
+      ]
+    ],
+    "sha256": "f256671047200bf8741b21b355983d28efbd6af46891d58cb3ffbc03caa7fca8"
+  },
+  "stl/current/B05_lid_pillar_RL.stl": {
+    "triangles": 1000,
+    "file_length_valid": true,
+    "edges_not_used_twice": 0,
+    "degenerate_triangles": 0,
+    "signed_volume_mm3": 4818.655,
+    "bounds_mm": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        12.0,
+        12.0,
+        38.0
+      ]
+    ],
+    "sha256": "f256671047200bf8741b21b355983d28efbd6af46891d58cb3ffbc03caa7fca8"
+  },
+  "stl/current/B05_lid_pillar_RR.stl": {
+    "triangles": 1000,
+    "file_length_valid": true,
+    "edges_not_used_twice": 0,
+    "degenerate_triangles": 0,
+    "signed_volume_mm3": 4818.655,
+    "bounds_mm": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        12.0,
+        12.0,
+        38.0
+      ]
+    ],
+    "sha256": "f256671047200bf8741b21b355983d28efbd6af46891d58cb3ffbc03caa7fca8"
+  },
+  "stl/current/B09_side_switch_panel_BLANK.stl": {
+    "triangles": 1196,
+    "file_length_valid": true,
+    "edges_not_used_twice": 0,
+    "degenerate_triangles": 0,
+    "signed_volume_mm3": 9455.7205,
+    "bounds_mm": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        82.0,
+        40.0,
+        3.0
+      ]
+    ],
+    "sha256": "bda38fb9e45822c44357b321901385e3b5c72bcfa311c24d83b8bf793731da1a"
+  },
+  "stl/current/C04_A1M8_rearranged_shelf_PROTOTYPE.stl": {
+    "triangles": 19284,
+    "file_length_valid": true,
+    "edges_not_used_twice": 0,
+    "degenerate_triangles": 0,
+    "signed_volume_mm3": 151703.6942,
+    "bounds_mm": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        183.000015,
+        212.000015,
+        11.0
+      ]
+    ],
+    "sha256": "94490ef3918eefe43e46b4457a8906f7af93ddc4520f5964f8fec1e74e5547b6"
+  }
+}

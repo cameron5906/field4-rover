@@ -1,0 +1,12 @@
+{
+  "objects": 266,
+  "meshes": 261,
+  "vertices": 67260,
+  "faces": 100662,
+  "numeric_geometry_equal_to_reviewed_subset": true,
+  "errors": [],
+  "external_libraries": 0,
+  "images": 0,
+  "embedded_scripts": 0,
+  "excluded_objects_absent": true
+}

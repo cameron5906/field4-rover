@@ -1,0 +1,31 @@
+# Local secrets and runtime data
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials*
+secrets*
+bridge/
+sessions/
+captures/
+logs/
+*.log
+
+# Generated caches and build products
+.godot/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+node_modules/
+build/
+dist/
+*.blend1
+*.blend2
+.DS_Store
+Thumbs.db
+
+# Preserve explicit reviewed artifacts; never add full original backups
+*Project_Backup*.zip
+*Complete_Windows*.zip

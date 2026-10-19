@@ -1,0 +1,30 @@
+# Local engine/import and interpreter output
+.godot/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+build/
+*.log
+# No captured home/people data, runtime state, credentials or account records
+bridge/
+captures/
+test_results/
+tests/results/
+*.jsonl
+.env
+.env.*
+*credentials*
+*secret*
+# Acquire upstream dependencies separately; do not vendor into this snapshot
+perception/runtime_windows/
+perception/runtime_windows.staging/
+perception/vendor_cache/
+perception/models/
+*.exe
+*.dll
+*.pyd
+*.tflite
+*.task
+# Procedural textures may be generated locally
+assets/textures/*.png

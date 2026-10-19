@@ -1,0 +1,895 @@
+{
+  "edition": "FIELD4 public technical source edition",
+  "date": "2026-10-19",
+  "revision": "Reviewed cloud revision 1 plus reviewed local historical references",
+  "scope": "Curated incomplete technical subset; exact-reference-derived C02 lid, T10 coupon and aperture profile are withheld. See docs/ARTIFACT_COVERAGE.md.",
+  "file_count_excluding_manifest": 177,
+  "total_bytes_excluding_manifest": 39850854,
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 398,
+      "sha256": "2c9c9253730d0eb7c31aebb0e1e96166e35c6197d7ea3c8942b6ac444211377f"
+    },
+    {
+      "path": "cad/FIELD4_Mechanical_Subset.blend",
+      "bytes": 1548098,
+      "sha256": "b898d3d5a89f460af32149834d86f87131d21f57fb9fb0426be16f5abdca59b7"
+    },
+    {
+      "path": "cad/README.md",
+      "bytes": 3664,
+      "sha256": "c04d620b9cebb4eb84309ad65edf46bcf3216660f916a9f4ce002ad712229842"
+    },
+    {
+      "path": "cad/source/audit_stls.py",
+      "bytes": 1310,
+      "sha256": "1f139a8bf50a52be543d7d04fa17304013a394ad9df29c70f6b67b541b32633f"
+    },
+    {
+      "path": "cad/source/historical/build_dimensioned_views.py",
+      "bytes": 21893,
+      "sha256": "aa6c7e05a71c2133ea24711d4616641bd366ec8cac45adccd55cebbe1c854d69"
+    },
+    {
+      "path": "cad/source/historical/build_original_reference.py",
+      "bytes": 37633,
+      "sha256": "65595a5cadffc93e6714a10d529133e35484f0b7e668fcd67b576da68feccc74"
+    },
+    {
+      "path": "cad/source/historical/build_recess_v02.py",
+      "bytes": 9541,
+      "sha256": "bf7cfbef6675730ac58e6151700642518e2bf15d68dfb3c93d4b5769f2ea59e0"
+    },
+    {
+      "path": "cad/source/historical/build_sleek.py",
+      "bytes": 37633,
+      "sha256": "65595a5cadffc93e6714a10d529133e35484f0b7e668fcd67b576da68feccc74"
+    },
+    {
+      "path": "cad/source/historical/verify_sensor_envelope.py",
+      "bytes": 2416,
+      "sha256": "8be6f85a2a888b36377d419d866e4c5288345638eb225bb89cecc20cd6196be7"
+    },
+    {
+      "path": "cad/stl/conditional/B06_camera_fork.stl",
+      "bytes": 108684,
+      "sha256": "b0683b6302faa6bc03fab8c3e28e14d6e09529d88aed4499ecf48d0b2359bc8e"
+    },
+    {
+      "path": "cad/stl/conditional/B07_camera_carrier.stl",
+      "bytes": 110084,
+      "sha256": "d366ab2dd3ea673e0c4f612c651ad730f5b1423e259d6d725f69fb9744b2336b"
+    },
+    {
+      "path": "cad/stl/conditional/B10_motor_mount_FL.stl",
+      "bytes": 236584,
+      "sha256": "449a224bd59687cd85eeafe5c83123e4e3a3430186c851dd55c90d2a3bfd3827"
+    },
+    {
+      "path": "cad/stl/conditional/B10_motor_mount_FR.stl",
+      "bytes": 236984,
+      "sha256": "c48c84eaf4772908f63949a84156a94966153437a97c9c8f9be6d603e7fdff23"
+    },
+    {
+      "path": "cad/stl/conditional/B10_motor_mount_RL.stl",
+      "bytes": 236584,
+      "sha256": "449a224bd59687cd85eeafe5c83123e4e3a3430186c851dd55c90d2a3bfd3827"
+    },
+    {
+      "path": "cad/stl/conditional/B10_motor_mount_RR.stl",
+      "bytes": 236984,
+      "sha256": "c48c84eaf4772908f63949a84156a94966153437a97c9c8f9be6d603e7fdff23"
+    },
+    {
+      "path": "cad/stl/conditional/C16_controller_hanger_front.stl",
+      "bytes": 105484,
+      "sha256": "8f888eb638aa2e38f7f460042e8cdf2099028e5f08e0efe5ef58b6b8860d54fd"
+    },
+    {
+      "path": "cad/stl/conditional/C16_controller_hanger_rear.stl",
+      "bytes": 105484,
+      "sha256": "f49f7aaa97e9d459c5f40b9e9758761558b8540526667e4b0c7af95b30877459"
+    },
+    {
+      "path": "cad/stl/coupons/T01_motor_face_coupon.stl",
+      "bytes": 176284,
+      "sha256": "fc733945a2b3ce28281a1fd6d3338760c5a946149a5d7666b93c5d00eee5d0dc"
+    },
+    {
+      "path": "cad/stl/coupons/T02_fastener_clearance_coupon.stl",
+      "bytes": 145784,
+      "sha256": "b4fed7b5ff6c0fd42fa3f82be38656902bcbb56e07461f3b3b133d21056eb443"
+    },
+    {
+      "path": "cad/stl/coupons/T03_bracket_floor_coupon.stl",
+      "bytes": 61484,
+      "sha256": "ffcde3528217bf1eb39af3ea1970e587ee64aab00575871a807ee409ffa4126d"
+    },
+    {
+      "path": "cad/stl/coupons/T04_camera_pattern_coupon.stl",
+      "bytes": 63084,
+      "sha256": "6d88d218fc1cc7f9206987c29ac4060f4350c055634805032b86ecd844588413"
+    },
+    {
+      "path": "cad/stl/coupons/T05_M3_captive_nut_coupon.stl",
+      "bytes": 36284,
+      "sha256": "35bfaad5648a6de7617b68887df370fea2908feeac5a9efd1dd48305b5a73e73"
+    },
+    {
+      "path": "cad/stl/coupons/T06_lid_clearance_coupon.stl",
+      "bytes": 3084,
+      "sha256": "83cb2e2512bfd842fb42c060a45c54a98c6ad38e63f48689586a5ed43debc3d4"
+    },
+    {
+      "path": "cad/stl/coupons/T07_lid_tongue_coupon.stl",
+      "bytes": 1484,
+      "sha256": "6e4e833fa3e9f3be1663197b251293cd56d15776a058a2d98946c325d5d9ce09"
+    },
+    {
+      "path": "cad/stl/coupons/T09_A1M8_four_foot_coupon.stl",
+      "bytes": 54484,
+      "sha256": "a34a94f76a60928a12c5f2c3918faba5868e2eb48f3321e9972796f0d25f769c"
+    },
+    {
+      "path": "cad/stl/current/B01_lower_tub.stl",
+      "bytes": 869984,
+      "sha256": "14fec0011d6627054fe0cc7cbbf3b071ea3dcbe5a0fe0a431693e5f7e411ea0c"
+    },
+    {
+      "path": "cad/stl/current/B05_lid_pillar_FL.stl",
+      "bytes": 50084,
+      "sha256": "f256671047200bf8741b21b355983d28efbd6af46891d58cb3ffbc03caa7fca8"
+    },
+    {
+      "path": "cad/stl/current/B05_lid_pillar_FR.stl",
+      "bytes": 50084,
+      "sha256": "f256671047200bf8741b21b355983d28efbd6af46891d58cb3ffbc03caa7fca8"
+    },
+    {
+      "path": "cad/stl/current/B05_lid_pillar_RL.stl",
+      "bytes": 50084,
+      "sha256": "f256671047200bf8741b21b355983d28efbd6af46891d58cb3ffbc03caa7fca8"
+    },
+    {
+      "path": "cad/stl/current/B05_lid_pillar_RR.stl",
+      "bytes": 50084,
+      "sha256": "f256671047200bf8741b21b355983d28efbd6af46891d58cb3ffbc03caa7fca8"
+    },
+    {
+      "path": "cad/stl/current/B09_side_switch_panel_BLANK.stl",
+      "bytes": 59884,
+      "sha256": "bda38fb9e45822c44357b321901385e3b5c72bcfa311c24d83b8bf793731da1a"
+    },
+    {
+      "path": "cad/stl/current/C04_A1M8_rearranged_shelf_PROTOTYPE.stl",
+      "bytes": 964284,
+      "sha256": "94490ef3918eefe43e46b4457a8906f7af93ddc4520f5964f8fec1e74e5547b6"
+    },
+    {
+      "path": "cad/validation/independent_stl_audit.json",
+      "bytes": 9775,
+      "sha256": "937cf8f2a8fa53b06c99812cfda01ba20d2b95abe17253ee6db9c2eee2a2bee8"
+    },
+    {
+      "path": "cad/validation/public_scene_validation.json",
+      "bytes": 248,
+      "sha256": "bd842f469646d50f7022c397b6519427017ae155193c714b07074071c1681916"
+    },
+    {
+      "path": "docs/ARTIFACT_COVERAGE.md",
+      "bytes": 2107,
+      "sha256": "286a31250d30e0b943cb45ca3fb276ae52d5acea28b4884159591584ca504fcf"
+    },
+    {
+      "path": "docs/CURRENT_BUILD.md",
+      "bytes": 2957,
+      "sha256": "072cffc830945a84fe912446d1996485906f0a0378a4460bf790145e01e0a708"
+    },
+    {
+      "path": "docs/hardware/architecture_proposal.txt",
+      "bytes": 18638,
+      "sha256": "5cd3d3628aeb46b412ad127120df666fa55bf19284c9f8dc3e197c92f27636e6"
+    },
+    {
+      "path": "docs/hardware/diagrams/01_system_architecture.png",
+      "bytes": 328363,
+      "sha256": "85a90cc5f8e36569c003f868b9fb625fa0fd193554599944c09f342229282c7b"
+    },
+    {
+      "path": "docs/hardware/diagrams/01_system_architecture.svg",
+      "bytes": 11390,
+      "sha256": "42d93174e1cef371859158daee22389bc9eff6ad693c74971e65c1001aa2c089"
+    },
+    {
+      "path": "docs/hardware/diagrams/02_power_and_stop.png",
+      "bytes": 352693,
+      "sha256": "657b4d35e3eb009cff13aa1c3740fdf8ccf1414775c872abbdd69dc1d7175a1e"
+    },
+    {
+      "path": "docs/hardware/diagrams/02_power_and_stop.svg",
+      "bytes": 11911,
+      "sha256": "fabca2ab2e7f6db7db5bfc5bf8bdae390b3ba00acbb457ed53eecff11196d2f3"
+    },
+    {
+      "path": "docs/hardware/diagrams/03_pinmap_and_motor_cell.png",
+      "bytes": 336201,
+      "sha256": "f30c64d5956c877aec7a763b39874112ca994069904112ea7e15ef1603ed249e"
+    },
+    {
+      "path": "docs/hardware/diagrams/03_pinmap_and_motor_cell.svg",
+      "bytes": 11724,
+      "sha256": "1ab8658e73195e4d863bcf0411da44612f897a2ebea6704ecdc28a91fad2fcd8"
+    },
+    {
+      "path": "docs/hardware/README.md",
+      "bytes": 974,
+      "sha256": "46d316fc2a976e43cf4af1ed74eea6fea97e1d42301864fa644616cf872f2818"
+    },
+    {
+      "path": "docs/history/rev-b/FIELD4_sleek_dimensions.pdf",
+      "bytes": 51168,
+      "sha256": "505cb7060631e51479c981d4a8cee657b2578187f9bfdcb6df1c32cde4cffff1"
+    },
+    {
+      "path": "docs/history/rev-b/FIELD4_sleek_envelope.svg",
+      "bytes": 18315,
+      "sha256": "636ef5791a2509f7b33760f0a4c137ac726578317dfe060e9ef811d967a1b430"
+    },
+    {
+      "path": "docs/history/rev-b/FIELD4_sleek_envelope_dimensions.png",
+      "bytes": 293164,
+      "sha256": "accc40da1bcc992d17ecfdec4aeeeb4110d371f8f3089168a7f4929a1aa74a0b"
+    },
+    {
+      "path": "docs/history/rev-b/FIELD4_sleek_interface_dimensions.png",
+      "bytes": 300811,
+      "sha256": "7a592a41733d59e67340e1d18b335a7f30504f4641626a1d7b63028f3cb0c6ca"
+    },
+    {
+      "path": "docs/history/rev-b/FIELD4_sleek_interfaces.svg",
+      "bytes": 20216,
+      "sha256": "91dcdb845e35dce094b809737de3a66fb34357a9a0083eac5d3efd1ecae1a104"
+    },
+    {
+      "path": "docs/history/rev-b/README.md",
+      "bytes": 631,
+      "sha256": "93c11c83a2f2a0a3fd65375874e087e8196541b1a9a2804695011e95efafe2c0"
+    },
+    {
+      "path": "docs/history/rev-b/sleek_assembled.png",
+      "bytes": 1598949,
+      "sha256": "aa16b75ea839c1800eaecabef96dc11aac21b492d170acfe456c89f2fb119ae2"
+    },
+    {
+      "path": "docs/history/rev-b/sleek_exploded.png",
+      "bytes": 1707363,
+      "sha256": "deee984eae673ab4fc9f683def9772b167f841ce6cf6704a77d3d5c36f0703dd"
+    },
+    {
+      "path": "docs/history/rev-b/sleek_internal_seats.png",
+      "bytes": 1662161,
+      "sha256": "8f1d0937e72e09515abe9f2b2ccc3a5e4cc6ffce64d20c38bd469851c692db20"
+    },
+    {
+      "path": "docs/history/software_v05_planning_contracts.md",
+      "bytes": 28637,
+      "sha256": "91b251e453fa763682a92bcfbc9629ca40fa1b5f6ae9a23c73401cda3b7ded2e"
+    },
+    {
+      "path": "docs/manual/annotations.json",
+      "bytes": 1703,
+      "sha256": "acbcceed3b68e518f700f335049f782d1a9afc99099f3f244145a4def1dce7e3"
+    },
+    {
+      "path": "docs/manual/FIELD4_Beginner_Visual_Build_Manual.pdf",
+      "bytes": 12168572,
+      "sha256": "8aa48235629be640f626c3772c5b5fbf8f9414376b5c601cdec7c6c484938242"
+    },
+    {
+      "path": "docs/manual/make_manual.py",
+      "bytes": 23900,
+      "sha256": "03e22fc464af750c7971c09241301d04720901da15c488f816a80304a7227adf"
+    },
+    {
+      "path": "docs/manual/README.md",
+      "bytes": 4165,
+      "sha256": "f8ce836d84c4a3e53b144b487fc65ad1c15bfd4c28fd1b53cf623223c14c01f0"
+    },
+    {
+      "path": "docs/manual/render_steps.py",
+      "bytes": 6207,
+      "sha256": "8a41d4746eb8f90a4abfdcaef7adc66271acb74046ec091a5ebb166fda8fa173"
+    },
+    {
+      "path": "docs/manual/renders/blank.png",
+      "bytes": 1014809,
+      "sha256": "d728283289061a3902613996d552e7a9b1a6814a4cc50c0c7c6ba07dbd87e589"
+    },
+    {
+      "path": "docs/manual/renders/coupons.png",
+      "bytes": 874802,
+      "sha256": "cc4a10fde07f604783fa2eadb82fe57262f6cbd3faec02f7e1fcbdb92651422f"
+    },
+    {
+      "path": "docs/manual/renders/cover.png",
+      "bytes": 1194783,
+      "sha256": "48a30599db70caabe03317b767f645175eac687de0667178bb70b51f41030f87"
+    },
+    {
+      "path": "docs/manual/renders/electronics.png",
+      "bytes": 1417440,
+      "sha256": "48e5613633bf8191e9d9eb1023cbc16ea7aa3451b13ee946374a0dc6a5119cea"
+    },
+    {
+      "path": "docs/manual/renders/lower.png",
+      "bytes": 1253553,
+      "sha256": "66a450e9ec9a4654f3bf42ba072cf1569c50478f5ecdeeb2c7e181e817cc492a"
+    },
+    {
+      "path": "docs/manual/renders/motor.png",
+      "bytes": 1134650,
+      "sha256": "b56410794d2f9d1e1b2b46511aa7c0b22c5960fd819c502577888e74ee01d421"
+    },
+    {
+      "path": "docs/manual/renders/orientation.png",
+      "bytes": 1683638,
+      "sha256": "bb07b06cb6da7b419ee4174747e0b7fcafff457dfb1306bfe40dc5df9c59fbeb"
+    },
+    {
+      "path": "docs/manual/renders/parts.png",
+      "bytes": 1229316,
+      "sha256": "56390774faa5834736c831fc9dfdd469ba5cc9b52bddad68fd016110710d745e"
+    },
+    {
+      "path": "docs/manual/renders/pillars.png",
+      "bytes": 1259105,
+      "sha256": "3732a921a8b8aeb84d86b545b7be18251045927f94825c929e6d264fcf844c54"
+    },
+    {
+      "path": "docs/manual/renders/sensor.png",
+      "bytes": 1215541,
+      "sha256": "65c689c42a2d0e063989f4321198add4669fd5030fa47c342a352c9598399593"
+    },
+    {
+      "path": "docs/manual/renders/shelf.png",
+      "bytes": 1336750,
+      "sha256": "845a11cb70cbe8ebd5bd987b4d8ce48a10daa8f40e3f91f42d66f08698bbedb7"
+    },
+    {
+      "path": "docs/manual/renders/wheel.png",
+      "bytes": 1012349,
+      "sha256": "ee234bcee2c113dc16b2e2502e185c79824077226ed806537f5d11a68a722cec"
+    },
+    {
+      "path": "docs/SAFETY_AND_LIMITS.md",
+      "bytes": 2538,
+      "sha256": "0c05467dcad66959ad21c3b3cee098b1164d9feef5fb1a9311a2c87494cbfa09"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3808,
+      "sha256": "e86ae06cf9140ace894869281301653b5e6de45908de8cbb3c0e1e5ff7fbfed2"
+    },
+    {
+      "path": "resources/LICENSING.md",
+      "bytes": 1702,
+      "sha256": "9b06071b21429a4383079d0383fb69bfb6cae03f7b54ac4a266a1edf3f2f9fce"
+    },
+    {
+      "path": "resources/manufacturer_sources.json",
+      "bytes": 4086,
+      "sha256": "a7883e313e3bc469b20a854db92f5306f59ba634eb5b042d1454c19a90ea73ad"
+    },
+    {
+      "path": "software/house-lab/.gitignore",
+      "bytes": 558,
+      "sha256": "ae82864ffa6799296105b7cea34d41b601a14bd44c99f5ff5d319c4518d7fec9"
+    },
+    {
+      "path": "software/house-lab/assets/camera_profiles.json",
+      "bytes": 4800,
+      "sha256": "fdde99afd501b5caf2118ecf9f997586c0742d8777cc959e17c6f0c978d80e8e"
+    },
+    {
+      "path": "software/house-lab/assets/textures/generate_textures.py",
+      "bytes": 1218,
+      "sha256": "1e498f8bb9c24a17b3e50de09ba47d7b198a60c29b2ca64cd32fd504fd07bacb"
+    },
+    {
+      "path": "software/house-lab/assets/textures/README.md",
+      "bytes": 315,
+      "sha256": "5dc1f39b2315e074d8a37c5c5443929e82a76bc5844a6e2b3291a52721610d7c"
+    },
+    {
+      "path": "software/house-lab/contracts/action.schema.json",
+      "bytes": 597,
+      "sha256": "43220b38ec8d68d2f5877834ed33630ef1d2973e41efa2886752b3f9d1fcb28e"
+    },
+    {
+      "path": "software/house-lab/docs/ARCHITECTURE.md",
+      "bytes": 3070,
+      "sha256": "50fba046ad8fbeb7fc8850c32bf270fbb4a5dcf3a87e7e8721a635fe31499039"
+    },
+    {
+      "path": "software/house-lab/docs/HARDWARE_PORTABILITY.md",
+      "bytes": 2332,
+      "sha256": "eda2e9c2edb23466126054104e63965c43c95f6d25de1e4e0fa16d2ea12bad7f"
+    },
+    {
+      "path": "software/house-lab/docs/VERIFICATION.md",
+      "bytes": 3124,
+      "sha256": "1181bc8b3ba18e51d33deba710db93deddd5bf8b5f5c1338ca09e5451cee886a"
+    },
+    {
+      "path": "software/house-lab/perception/.gdignore",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "software/house-lab/perception/.gitignore",
+      "bytes": 86,
+      "sha256": "9f78162851973b675afefa09090b851786e5aa93a1c232958cefdba7dc6b507d"
+    },
+    {
+      "path": "software/house-lab/perception/benchmark_compute.py",
+      "bytes": 10936,
+      "sha256": "2efefd7f5c24ed477f256de6a24bf70b6ee3508aedb906d133488ba967d0824c"
+    },
+    {
+      "path": "software/house-lab/perception/build_windows_runtime.py",
+      "bytes": 4294,
+      "sha256": "f1e35e7e2116d7fded4a84ea0ca6c1a8b780bb05d8233c059c61a6b325404a4b"
+    },
+    {
+      "path": "software/house-lab/perception/compute_profile.py",
+      "bytes": 16502,
+      "sha256": "dfb34046b26d27404d5d2a268d143133d9108971f40bfd9859f366b2322e7d7e"
+    },
+    {
+      "path": "software/house-lab/perception/download_models.py",
+      "bytes": 1573,
+      "sha256": "99250d20b8e9198c9b42f4f44c81d42c57c393acdc436a6561680336f65570ca"
+    },
+    {
+      "path": "software/house-lab/perception/evaluate_frames.py",
+      "bytes": 5231,
+      "sha256": "1f8b09b68101f5b8e865082fc6615eccf94b7bd9475ee76ffbb6ae5b9faa1f16"
+    },
+    {
+      "path": "software/house-lab/perception/gesture.py",
+      "bytes": 1221,
+      "sha256": "fa433527913d30fe8a0742831fda3e24fe5df760034656110e17706d3389e790"
+    },
+    {
+      "path": "software/house-lab/perception/landmarks.py",
+      "bytes": 15838,
+      "sha256": "18f62cbac92d50af0aaa17ff8352ea53c45bdc95e9c74b68fee9199fc02aa476"
+    },
+    {
+      "path": "software/house-lab/perception/linux_artifacts.json",
+      "bytes": 5934,
+      "sha256": "92ec308d92f96a413ad99d8e29e0ac0871d0c02d479d0e117aa0a8e17f64c1f3"
+    },
+    {
+      "path": "software/house-lab/perception/model_provenance.json",
+      "bytes": 591,
+      "sha256": "15c337540902c85aea80d90e34da4516ea77c367cc1af16cfcac66c4cdaa33f9"
+    },
+    {
+      "path": "software/house-lab/perception/person_detector_bridge.py",
+      "bytes": 10172,
+      "sha256": "f22d883dc50bc95e13c580cd1ac1e5c1f514dcc9217e3a1a359bc295437abf00"
+    },
+    {
+      "path": "software/house-lab/perception/person_evidence.py",
+      "bytes": 7937,
+      "sha256": "09af2c871db0250838f157c0db1c07ec89482e274d2049ba90a577173a19c6a4"
+    },
+    {
+      "path": "software/house-lab/perception/person_tracking.py",
+      "bytes": 13433,
+      "sha256": "d08dab3881f6b8f46ed81eca9d909329b98649ae17582835f95cdaf66a46e458"
+    },
+    {
+      "path": "software/house-lab/perception/pose_model_provenance.json",
+      "bytes": 563,
+      "sha256": "a01564df24866a31ec56295edd013cd6f5b1c6fe70be121667cedc3d7a800577"
+    },
+    {
+      "path": "software/house-lab/perception/probe_runtime.py",
+      "bytes": 5419,
+      "sha256": "a46272e1a97aec0164babe05b9e39f0dd81cbae443a949c07fab6afe9d1c4e60"
+    },
+    {
+      "path": "software/house-lab/perception/profiles/native.json",
+      "bytes": 499,
+      "sha256": "d39687d949c416dae6ab9538b7da2604542bc5c6d1b533cca6590b1302760c0b"
+    },
+    {
+      "path": "software/house-lab/perception/profiles/pi4_budget.json",
+      "bytes": 471,
+      "sha256": "fa66d1f26c230d74b82414033a2a5f025f8324e3dbf9bf19e02b212e5af9ada8"
+    },
+    {
+      "path": "software/house-lab/perception/profiles/pi4_stress.json",
+      "bytes": 485,
+      "sha256": "6255dbbcfc775ba12f0df4f7876d9c3a7e0868ba556db3920a5ebdb2eaad0119"
+    },
+    {
+      "path": "software/house-lab/perception/requirements-linux.lock",
+      "bytes": 1804,
+      "sha256": "e455597b5e81cde2dd7e11b1505c391a98637698f7458e72b49d968f67084a06"
+    },
+    {
+      "path": "software/house-lab/perception/requirements-windows.lock",
+      "bytes": 1806,
+      "sha256": "7373b3146904e0a22266f8d2d77fee6e23eb07aaf23efb715c6a6d9695d42499"
+    },
+    {
+      "path": "software/house-lab/perception/requirements.txt",
+      "bytes": 324,
+      "sha256": "1c2b188d82d994db937db489dd59d499e847c922a3f18d34e54fbf06bb17c290"
+    },
+    {
+      "path": "software/house-lab/perception/setup_linux.sh",
+      "bytes": 547,
+      "sha256": "f87281473fd66a591d065f691a1ae37986566df4ce8098dc5e49d353333f27b8"
+    },
+    {
+      "path": "software/house-lab/perception/test_runtime_packaging.py",
+      "bytes": 4060,
+      "sha256": "1bad34ccff6f76d39c4ad9694626cd249708423ac6dab08b801ca14cae32b674"
+    },
+    {
+      "path": "software/house-lab/perception/tests/analyze_attitude_capture.py",
+      "bytes": 4883,
+      "sha256": "939ce44c89df85b04da3df0eabd1851ba9e52aa19d7948f9b57a2fca2da6102b"
+    },
+    {
+      "path": "software/house-lab/perception/tests/compare_live_fusion_replay.py",
+      "bytes": 3395,
+      "sha256": "77c8faa7ef9e8dcffe355c076a2227a6801fa32e71076a746848af3edf77b8ae"
+    },
+    {
+      "path": "software/house-lab/perception/tests/evaluate_detector_bridge_capture.py",
+      "bytes": 5027,
+      "sha256": "11f482fc11835897d65b4426b95d321c620d1fb57b0d113a52719cf2cb0d2699"
+    },
+    {
+      "path": "software/house-lab/perception/tests/evaluate_tracking_frames.py",
+      "bytes": 3331,
+      "sha256": "0da1b1268feab13dc027530a65f8bd0d4fbb5b9b0b08f7fa1d50dd1732124808"
+    },
+    {
+      "path": "software/house-lab/perception/tests/make_synthetic_replay.py",
+      "bytes": 1716,
+      "sha256": "5111651e8ecab665dcb0954eb5ae17ced74e03d473b71461336fe2f995d180de"
+    },
+    {
+      "path": "software/house-lab/perception/tests/replay_person_tracking.py",
+      "bytes": 5398,
+      "sha256": "b18770d4a5ab19fc39ca22ae6a96afe1319db73d5112a55477a6e91414aa54d1"
+    },
+    {
+      "path": "software/house-lab/perception/tests/replay_rendered_capture.py",
+      "bytes": 3161,
+      "sha256": "0f797000d298a7515f6bc47561f98e43f22ab8a1dbc6cf436163dd293d2f1751"
+    },
+    {
+      "path": "software/house-lab/perception/tests/test_lidar_sampling.py",
+      "bytes": 3678,
+      "sha256": "fdff9743675efca7f34564ef6699b5b09ae51a684e1099c91c46b1e49e891438"
+    },
+    {
+      "path": "software/house-lab/perception/tests/test_person_detector_bridge.py",
+      "bytes": 7752,
+      "sha256": "fbb095944365f35c1ed8f8c3a9905d36c2560d31c57bdb3a592319a3105af5ab"
+    },
+    {
+      "path": "software/house-lab/perception/tests/test_person_tracking.py",
+      "bytes": 19320,
+      "sha256": "37459bf4256f3120202046d30a49c85387c8bd66feb50ed71ee1f97e3a6c673b"
+    },
+    {
+      "path": "software/house-lab/perception/tests/test_replay_capture.py",
+      "bytes": 2294,
+      "sha256": "6526520e87247979e4fd5676b404635aad900bf7be334d0962d5e09e4976f6d5"
+    },
+    {
+      "path": "software/house-lab/perception/tests/test_worker_person_contract.py",
+      "bytes": 7684,
+      "sha256": "46f6f410665d0451a30b89d84feb1380d0c1b2cb3a3c9494ee280ab2cf6cbe10"
+    },
+    {
+      "path": "software/house-lab/perception/verify_windows_runtime.cmd",
+      "bytes": 462,
+      "sha256": "5642d7b4f5b3a233ed26501e64aaa1f067e19a6d229c03e795992da9b17b8db6"
+    },
+    {
+      "path": "software/house-lab/perception/windows_runtime_manifest.json",
+      "bytes": 7676,
+      "sha256": "280a385d0456c175e55dec935a46e6670f86d97f7f0ba18ae1b0b3d1f7e4efa2"
+    },
+    {
+      "path": "software/house-lab/perception/worker.py",
+      "bytes": 15185,
+      "sha256": "68344cbb81030ee92830b98100a712d3cc793c702f8445cc2f53b4187f75576a"
+    },
+    {
+      "path": "software/house-lab/physics/attitude_estimator.gd",
+      "bytes": 10323,
+      "sha256": "7241b616b6ef7831514c77800d32c44f8a85121c95ffb98a3462ee57449a9bcc"
+    },
+    {
+      "path": "software/house-lab/physics/attitude_estimator.gd.uid",
+      "bytes": 20,
+      "sha256": "6f80ce3d87a3352c8748522290d5a07f13a4c4b47afbd11f3fcb02aa1802091b"
+    },
+    {
+      "path": "software/house-lab/physics/cad_mass_audit.json",
+      "bytes": 14140,
+      "sha256": "616315a1c114fec9feacf4aa4c8eb1873911aaa8f4fe33479a3abe5a9df61573"
+    },
+    {
+      "path": "software/house-lab/physics/drive_dynamics.gd",
+      "bytes": 5615,
+      "sha256": "cb07d714cfdb7f8ed117ad4e7f9ac59af0eb82bc78113e47a90d63b49b25378b"
+    },
+    {
+      "path": "software/house-lab/physics/drive_dynamics.gd.uid",
+      "bytes": 20,
+      "sha256": "80925bf453398aa1d76733bc9b3b1a225a4a7eabbd55d5c09321c84e39159509"
+    },
+    {
+      "path": "software/house-lab/physics/imu_sensor.gd",
+      "bytes": 8207,
+      "sha256": "095b9291b069e68842fd5daf52b22b615e55a6668641cb5cb64824b66ab37a8f"
+    },
+    {
+      "path": "software/house-lab/physics/imu_sensor.gd.uid",
+      "bytes": 19,
+      "sha256": "5f4553aede07a80881f0a781de14f38c2da16bde35db29caec9d2b6b2323f244"
+    },
+    {
+      "path": "software/house-lab/physics/physics_estimates.json",
+      "bytes": 45224,
+      "sha256": "b5a38c111f4943acd6ec6c35fca012398dd664a6636f1dc4129d1a8e4bfb7c62"
+    },
+    {
+      "path": "software/house-lab/physics/rigid_wheel_contacts.gd",
+      "bytes": 7664,
+      "sha256": "8dc675196a05e000ae073e3a24afac08c2908fc811b80e9b5c15f869829a23df"
+    },
+    {
+      "path": "software/house-lab/physics/rigid_wheel_contacts.gd.uid",
+      "bytes": 20,
+      "sha256": "c3937ec27e883ec89f0ab8ea4b7ac26f55d48dfd1e2cfbc97e1f1c0ffe92cb05"
+    },
+    {
+      "path": "software/house-lab/project.godot",
+      "bytes": 365,
+      "sha256": "015fd9f3f380b1ce39212799066c526298b9802c85a7d66ca1d6c049d502f70e"
+    },
+    {
+      "path": "software/house-lab/README.md",
+      "bytes": 5802,
+      "sha256": "e8d9bb01d68f9c6f76507968ea9526e8499122e71701bca6cbf959f9d4a40ae1"
+    },
+    {
+      "path": "software/house-lab/scripts/decisions_adapter.gd",
+      "bytes": 7778,
+      "sha256": "e076dfad05d1ad30ba1d9096216cbcc11ab7512e34eb69e062cfc18d9dd72432"
+    },
+    {
+      "path": "software/house-lab/scripts/decisions_adapter.gd.uid",
+      "bytes": 19,
+      "sha256": "c6d71a3b49b295049c5e3282af72f4d8c50068e5e45c0d61f6df387d2bbe3ce7"
+    },
+    {
+      "path": "software/house-lab/scripts/exploration_memory.gd",
+      "bytes": 12814,
+      "sha256": "2c882b7469e133251314911412bc4b65a34a0b8801d64661cb0e39b0663624b8"
+    },
+    {
+      "path": "software/house-lab/scripts/exploration_memory.gd.uid",
+      "bytes": 20,
+      "sha256": "3260565c9d1acf5929432d6352d12ece9f6024208592c558cfc31cbc7f7d2008"
+    },
+    {
+      "path": "software/house-lab/scripts/gesture_guard.gd",
+      "bytes": 7065,
+      "sha256": "d21d34625d77f09f7212441f345673c0bae7829ecb091bc6c9f82100a0247867"
+    },
+    {
+      "path": "software/house-lab/scripts/gesture_guard.gd.uid",
+      "bytes": 20,
+      "sha256": "46cc34a6f088139d470619642ee38b7e08f61a5104c81c83cec12850f128f56e"
+    },
+    {
+      "path": "software/house-lab/scripts/grid_motion.gd",
+      "bytes": 5205,
+      "sha256": "c544b55f9cdbad53f390dc08feb5f90ff34a8cc6520c0624093fd87afdf728dc"
+    },
+    {
+      "path": "software/house-lab/scripts/grid_motion.gd.uid",
+      "bytes": 20,
+      "sha256": "9fbe48056034292315a9c1f3fde4ab948cad297b997f56dbf4ad5d5ca665592b"
+    },
+    {
+      "path": "software/house-lab/scripts/landmark_task.gd",
+      "bytes": 18125,
+      "sha256": "b97305ce701db926d697d5f016a2de07a2bd18024116782c1f68bbe65bf3008a"
+    },
+    {
+      "path": "software/house-lab/scripts/landmark_task.gd.uid",
+      "bytes": 20,
+      "sha256": "a2c98576f20cf1224e0347e5442594cd7e971da2cd19e87e454fa240735af760"
+    },
+    {
+      "path": "software/house-lab/scripts/lidar_plot.gd",
+      "bytes": 3042,
+      "sha256": "ad3e64cce44106ccf82946c229d21ceba7ff214dc2fb8cfa99de8994a7e51e34"
+    },
+    {
+      "path": "software/house-lab/scripts/lidar_plot.gd.uid",
+      "bytes": 19,
+      "sha256": "4a4ce27afa33f0ae90da6a273e4b4d9b2f3cb372ea5b39688af003022ab6ae13"
+    },
+    {
+      "path": "software/house-lab/scripts/lidar_sampling.gd",
+      "bytes": 3985,
+      "sha256": "b0225b0d6ff26b53c2e3322896b521851b03c45cb73cf5a377148169abe65a72"
+    },
+    {
+      "path": "software/house-lab/scripts/lidar_sampling.gd.uid",
+      "bytes": 19,
+      "sha256": "f94332b164df40fca14aae51a17d06e44c2c08ae3ce84d1b6f4b2181b1f6242f"
+    },
+    {
+      "path": "software/house-lab/scripts/map_overlay.gd",
+      "bytes": 2697,
+      "sha256": "76517ce31253801ad7022e45224728e3a3a68b328dcd190ba48d2f40af82660b"
+    },
+    {
+      "path": "software/house-lab/scripts/map_overlay.gd.uid",
+      "bytes": 20,
+      "sha256": "9d1614e4b898efdd54879b3d41ec573beedc647406cb0dad770d83610621a61c"
+    },
+    {
+      "path": "software/house-lab/scripts/mapping.gd",
+      "bytes": 12024,
+      "sha256": "ceac6111afe99914eddf6d448b6aebb9665775b3b4822a5a03a28fcff8509bc6"
+    },
+    {
+      "path": "software/house-lab/scripts/mapping.gd.uid",
+      "bytes": 20,
+      "sha256": "9381c32d210de23fe12c828780521f13759ba5af203ffe284be70041ec222140"
+    },
+    {
+      "path": "software/house-lab/scripts/perception_client.gd",
+      "bytes": 9716,
+      "sha256": "7d2f6b29d4a72dd210230cc08e8599f464bcc290319b9e4cd33b09d519f46361"
+    },
+    {
+      "path": "software/house-lab/scripts/perception_client.gd.uid",
+      "bytes": 20,
+      "sha256": "6705727a50257aaccbb45a3ec12b841c32dbf517e405ce33f7195ff635f8681f"
+    },
+    {
+      "path": "software/house-lab/scripts/perception_overlay.gd",
+      "bytes": 2061,
+      "sha256": "656712e3dd30e30fd466098470533c82bf20e7c2d9e0d1ace9cf07922761efda"
+    },
+    {
+      "path": "software/house-lab/scripts/perception_overlay.gd.uid",
+      "bytes": 19,
+      "sha256": "39ec0c38c89879a556acfff913c60c05b0ed3f34b60e5ca50777c1578bcf161f"
+    },
+    {
+      "path": "software/house-lab/scripts/person_follow.gd",
+      "bytes": 23368,
+      "sha256": "2e96edbd596f4c3843c4dfffd5c45435638a9852c3d17f2ff803f8b70bd716b5"
+    },
+    {
+      "path": "software/house-lab/scripts/person_follow.gd.uid",
+      "bytes": 20,
+      "sha256": "e2b9075fb3270594ad4bce167e4e016c8cce77c15b645089232276e252f8243e"
+    },
+    {
+      "path": "software/house-lab/scripts/recognizable_chair.gd",
+      "bytes": 4093,
+      "sha256": "dfb5e946dc7b21f80a9e5646725cbfc3b913b97632018573a4b88f14e4826f65"
+    },
+    {
+      "path": "software/house-lab/scripts/recognizable_chair.gd.uid",
+      "bytes": 20,
+      "sha256": "a68ee995361cde4a36013a7f49acb2d8e0ad77324e742ea1f1994ef1edcadb9b"
+    },
+    {
+      "path": "software/house-lab/scripts/scan_matcher.gd",
+      "bytes": 16025,
+      "sha256": "35748d8c0bc259e56b598e13030e0d83d600ba1d8894fcd424e9caa9e17e56fd"
+    },
+    {
+      "path": "software/house-lab/scripts/scan_matcher.gd.uid",
+      "bytes": 20,
+      "sha256": "0ad6fd3e72a512c896ef9fafcddbd57664b40d25db1706551ba4d6a2133aafe1"
+    },
+    {
+      "path": "software/house-lab/scripts/semantic_planner.gd",
+      "bytes": 48559,
+      "sha256": "b9eadf26ea1a7a8a52d196c97a5e240fbf9f81559b92a2937835c8c1fe51842f"
+    },
+    {
+      "path": "software/house-lab/scripts/semantic_planner.gd.uid",
+      "bytes": 19,
+      "sha256": "eee4615c5b64577cc861487252cdc1ea3004c9a783bfdf98ecf76c57c70f2d6f"
+    },
+    {
+      "path": "software/house-lab/SOURCE_MANIFEST.json",
+      "bytes": 16972,
+      "sha256": "cd2d1fe2170a0f093a638a27773ac75576065581b09b2d286f4fa67caa925b08"
+    },
+    {
+      "path": "software/house-lab/tests/build_follow_contract_fixture_v073.py",
+      "bytes": 10082,
+      "sha256": "78c941360047c225d4e80b4224e3fd42fb78514e25eb5ab3315b7f27fc6bd193"
+    },
+    {
+      "path": "software/house-lab/tests/test_attitude_estimator_v073.gd",
+      "bytes": 10715,
+      "sha256": "f4feec09e013570b8aeb0e447c03bb2699f7752c91da578fa3890779fe28974d"
+    },
+    {
+      "path": "software/house-lab/tests/test_attitude_estimator_v073.gd.uid",
+      "bytes": 20,
+      "sha256": "b67f781f57a1bbac5912caa3aa7a5a0adaf4f5c5ba6ad7ef49960cbc88f8dfd5"
+    },
+    {
+      "path": "software/house-lab/tests/test_exploration_memory.gd",
+      "bytes": 19783,
+      "sha256": "4d410716542f2845e97a43de59e24de42885e5b6e9142d4971b1199926b1efa9"
+    },
+    {
+      "path": "software/house-lab/tests/test_exploration_memory.gd.uid",
+      "bytes": 19,
+      "sha256": "1dacf39583cc9cd60da52b2174d57451a51ad0fb6c876d0b456e104b5b05f1ce"
+    },
+    {
+      "path": "software/house-lab/tests/test_follow_tracker_contract_v073.gd",
+      "bytes": 2986,
+      "sha256": "6fc8a63f12a8c5aa55dbf1ed0656bd364dbc312fe98fe7a137c98ccac2c49907"
+    },
+    {
+      "path": "software/house-lab/tests/test_follow_tracker_contract_v073.gd.uid",
+      "bytes": 20,
+      "sha256": "7e0aff21944b660cbe446ce21144f9a309aaa9a14accf06f3a20f0136552f071"
+    },
+    {
+      "path": "software/house-lab/tests/test_perception_capture_cadence_v073.gd",
+      "bytes": 4277,
+      "sha256": "f09736a90280ba7b68d8b722f39a87f98333283b434ae8964b8ac875130eee40"
+    },
+    {
+      "path": "software/house-lab/tests/test_perception_capture_cadence_v073.gd.uid",
+      "bytes": 20,
+      "sha256": "26c968f6022837678f20799abdd3c097f1faacf4743a834b1ab11878c6f4064a"
+    },
+    {
+      "path": "software/house-lab/tests/test_room_search_integration.gd",
+      "bytes": 5439,
+      "sha256": "9fa28a1f53035f3604506c7adb5b0c8052003e22fc1bf5220f8fe449ef3c6dc1"
+    },
+    {
+      "path": "software/house-lab/tests/test_room_search_integration.gd.uid",
+      "bytes": 18,
+      "sha256": "1cd5d0a10358c728f70d4e9919d44c928d9e19fa195296e8c0af8d05be899fe8"
+    },
+    {
+      "path": "software/house-lab/third_party/DEPENDENCIES.md",
+      "bytes": 1798,
+      "sha256": "68d4f22d7212332f282f6f0adfaa61bd2f4936ea50b4851177ce022124c0ee0c"
+    }
+  ]
+}

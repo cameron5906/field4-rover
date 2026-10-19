@@ -1,0 +1,17 @@
+{
+  "name": "native",
+  "description": "Same 3 Hz scheduling policy with no artificial latency; measure this host, never assume Pi4 equivalence",
+  "inference_rate_hz": 3.0,
+  "object_every_n_frames": 1,
+  "pose_every_n_frames": 1,
+  "minimum_processing_ms": 0.0,
+  "delay_jitter_ms": 0.0,
+  "contention_every_n_frames": 0,
+  "contention_delay_ms": 0.0,
+  "threads": 2,
+  "affinity_cores": 2,
+  "max_input_width": 640,
+  "max_input_height": 360,
+  "random_seed": 4,
+  "calibration_evidence": null
+}

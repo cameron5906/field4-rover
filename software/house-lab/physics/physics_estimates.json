@@ -1,0 +1,1830 @@
+{
+  "schema_version": 1,
+  "status": "engineering estimate, uncalibrated; not hardware-validated",
+  "units": "SI",
+  "source_checked_utc": "2026-10-11",
+  "coordinate_system": {
+    "cad": "X forward, Y left, Z up; origin center XY at ground plane",
+    "godot": "X right, Y up, -Z forward; origin center XY at ground plane",
+    "cad_to_godot_matrix": [
+      [
+        0,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        -1,
+        0,
+        0
+      ]
+    ]
+  },
+  "sources": {
+    "motor": "https://www.dfrobot.com/product-633.html",
+    "wheel": "https://www.gobilda.com/hogback-traction-wheel-96mm-diameter-50a-durometer/",
+    "hub": "https://www.gobilda.com/1309-series-sonic-hub-6mm-bore/",
+    "driver": "https://www.pololu.com/product/4035",
+    "lidar": "https://www.slamtec.ai/wp-content/uploads/2023/11/LD108_SLAMTEC_rplidar_datasheet_A1M8_v3.0_en.pdf",
+    "pi": "https://magazine.raspberrypi.com/articles/raspberry-pi-4-specs-benchmarks/",
+    "bioenno": "https://www.bioennopower.com/products/12v-6ah-lifepo4-battery-pvc"
+  },
+  "components": [
+    {
+      "id": "B01_lower_tub",
+      "volume_m3": 0.0003948350389005281,
+      "surface_area_m2": 0.22084019150690876,
+      "solid_pla_mass_kg": 0.48959544823665485,
+      "estimated_fill_fraction": 0.6474581427663935,
+      "mass_kg": 0.3169925596221845,
+      "center_cad_m": [
+        -3.029941570942721e-11,
+        -0.0008593115369918421,
+        0.04977299245877264
+      ],
+      "inertia_per_mass_cad_m2": [
+        [
+          0.005273069665780305,
+          -3.0671247950249003e-12,
+          1.4658478243565064e-12
+        ],
+        [
+          -3.0671247950249003e-12,
+          0.006703267989098084,
+          3.358624541831353e-05
+        ],
+        [
+          1.4658478243565064e-12,
+          3.358624541831353e-05,
+          0.010257683065171717
+        ]
+      ],
+      "mass_basis": "CAD hollow solid volume, estimated print fill",
+      "mass_range_kg": [
+        0.23774441971663834,
+        0.3962406995277306
+      ]
+    },
+    {
+      "id": "B03_battery_stop_front",
+      "volume_m3": 1.1967616318893565e-05,
+      "surface_area_m2": 0.006971368154473056,
+      "solid_pla_mass_kg": 0.01483984423542802,
+      "estimated_fill_fraction": 0.6660154850363771,
+      "mass_kg": 0.009883566056322877,
+      "center_cad_m": [
+        0.06554561748063266,
+        5.95972050046294e-17,
+        0.03533782531089539
+      ],
+      "inertia_per_mass_cad_m2": [
+        [
+          0.0005844246872634437,
+          -1.9438756821021764e-18,
+          2.1288290662883035e-05
+        ],
+        [
+          -1.9438756821021764e-18,
+          7.790141201663154e-05,
+          1.0827616316869588e-18
+        ],
+        [
+          2.1288290662883035e-05,
+          1.0827616316869588e-18,
+          0.0006028543616980974
+        ]
+      ],
+      "mass_basis": "CAD hollow solid volume, estimated print fill",
+      "mass_range_kg": [
+        0.007412674542242158,
+        0.012354457570403595
+      ]
+    },
+    {
+      "id": "B03_battery_stop_rear",
+      "volume_m3": 1.1967616318893547e-05,
+      "surface_area_m2": 0.00697136815447306,
+      "solid_pla_mass_kg": 0.014839844235427998,
+      "estimated_fill_fraction": 0.666015485036378,
+      "mass_kg": 0.009883566056322875,
+      "center_cad_m": [
+        -0.06554561748063277,
+        -1.536152950104831e-17,
+        0.03533782531089543
+      ],
+      "inertia_per_mass_cad_m2": [
+        [
+          0.0005844246872634459,
+          -1.4586963870073164e-18,
+          -2.1288290662890407e-05
+        ],
+        [
+          -1.4586963870073164e-18,
+          7.790141201662808e-05,
+          -1.083369305526524e-18
+        ],
+        [
+          -2.1288290662890407e-05,
+          -1.083369305526524e-18,
+          0.0006028543616980961
+        ]
+      ],
+      "mass_basis": "CAD hollow solid volume, estimated print fill",
+      "mass_range_kg": [
+        0.007412674542242157,
+        0.012354457570403593
+      ]
+    },
+    {
+      "id": "B05_lid_pillar_FL",
+      "volume_m3": 4.818654963524952e-06,
+      "surface_area_m2": 0.0026163532819059496,
+      "solid_pla_mass_kg": 0.005975132154770941,
+      "estimated_fill_fraction": 0.6343707199142608,
+      "mass_kg": 0.00379044888660489,
+      "center_cad_m": [
+        0.08400000000000042,
+        0.06707718457309769,
+        0.1309999983610847
+      ],
+      "inertia_per_mass_cad_m2": [
+        [
+          0.0001264853492163858,
+          -2.6020852139652106e-18,
+          4.163336342344337e-17
+        ],
+        [
+          -2.6020852139652106e-18,
+          0.00012687908178778563,
+          -3.3979919572546535e-12
+        ],
+        [
+          4.163336342344337e-17,
+          -3.3979919572546535e-12,
+          2.5701172897084172e-05
+        ]
+      ],
+      "mass_basis": "CAD hollow solid volume, estimated print fill",
+      "mass_range_kg": [
+        0.0028428366649536673,
+        0.004738061108256112
+      ]
+    },
+    {
+      "id": "B05_lid_pillar_FR",
+      "volume_m3": 4.818654963524308e-06,
+      "surface_area_m2": 0.002616353281905953,
+      "solid_pla_mass_kg": 0.005975132154770141,
+      "estimated_fill_fraction": 0.6343707199143196,
+      "mass_kg": 0.003790448886604734,
+      "center_cad_m": [
+        0.084000000000003,
+        -0.06692281542690508,
+        0.13099999836108753
+      ],
+      "inertia_per_mass_cad_m2": [
+        [
+          0.00012648534921615162,
+          -9.627715291671279e-17,
+          1.5785983631388945e-16
+        ],
+        [
+          -9.627715291671279e-17,
+          0.0001268790817875393,
+          -3.3981255309623037e-12
+        ],
+        [
+          1.5785983631388945e-16,
+          -3.3981255309623037e-12,
+          2.570117289688121e-05
+        ]
+      ],
+      "mass_basis": "CAD hollow solid volume, estimated print fill",
+      "mass_range_kg": [
+        0.0028428366649535506,
+        0.004738061108255918
+      ]
+    },
+    {
+      "id": "B05_lid_pillar_RL",
+      "volume_m3": 4.8186549635252726e-06,
+      "surface_area_m2": 0.0026163532819059496,
+      "solid_pla_mass_kg": 0.005975132154771338,
+      "estimated_fill_fraction": 0.6343707199142319,
+      "mass_kg": 0.0037904488866049696,
+      "center_cad_m": [
+        -0.08399999999999899,
+        0.06707718457309671,
+        0.13099999836108017
+      ],
+      "inertia_per_mass_cad_m2": [
+        [
+          0.00012648534921664255,
+          3.469446951953614e-18,
+          3.2959746043559335e-17
+        ],
+        [
+          3.469446951953614e-18,
+          0.00012687908178807532,
+          -3.398019712830269e-12
+        ],
+        [
+          3.2959746043559335e-17,
+          -3.398019712830269e-12,
+          2.5701172897089376e-05
+        ]
+      ],
+      "mass_basis": "CAD hollow solid volume, estimated print fill",
+      "mass_range_kg": [
+        0.002842836664953727,
+        0.004738061108256212
+      ]
+    },
+    {
+      "id": "B05_lid_pillar_RR",
+      "volume_m3": 4.818654963525617e-06,
+      "surface_area_m2": 0.0026163532819059527,
+      "solid_pla_mass_kg": 0.005975132154771766,
+      "estimated_fill_fraction": 0.6343707199142015,
+      "mass_kg": 0.003790448886605059,
+      "center_cad_m": [
+        -0.08399999999999727,
+        -0.06692281542690033,
+        0.1309999983610791
+      ],
+      "inertia_per_mass_cad_m2": [
+        [
+          0.00012648534921680128,
+          -8.500145032286355e-17,
+          1.43982048506075e-16
+        ],
+        [
+          -8.500145032286355e-17,
+          0.00012687908178827655,
+          -3.397896547463475e-12
+        ],
+        [
+          1.43982048506075e-16,
+          -3.397896547463475e-12,
+          2.5701172897234226e-05
+        ]
+      ],
+      "mass_basis": "CAD hollow solid volume, estimated print fill",
+      "mass_range_kg": [
+        0.0028428366649537943,
+        0.004738061108256324
+      ]
+    },
+    {
+      "id": "B06_camera_fork",
+      "volume_m3": 1.4729988496962968e-05,
+      "surface_area_m2": 0.007113653325333248,
+      "solid_pla_mass_kg": 0.01826518573623408,
+      "estimated_fill_fraction": 0.5863494300379091,
+      "mass_kg": 0.0107097812459774,
+      "center_cad_m": [
+        0.08882932105339704,
+        -1.5117582839358654e-12,
+        0.12060591708870527
+      ],
+      "inertia_per_mass_cad_m2": [
+        [
+          0.0005608007604880343,
+          1.7349761302241247e-14,
+          -7.148068593428036e-06
+        ],
+        [
+          1.7349761302241247e-14,
+          0.00013290063203178637,
+          7.794219376768464e-16
+        ],
+        [
+          -7.148068593428036e-06,
+          7.794219376768464e-16,
+          0.0005434001188509637
+        ]
+      ],
+      "mass_basis": "CAD hollow solid volume, estimated print fill",
+      "mass_range_kg": [
+        0.00803233593448305,
+        0.01338722655747175
+      ]
+    },
+    {
+      "id": "B07_camera_carrier",
+      "volume_m3": 1.0010885002836125e-05,
+      "surface_area_m2": 0.004464952877504784,
+      "solid_pla_mass_kg": 0.012413497403516795,
+      "estimated_fill_fraction": 0.5568078447601661,
+      "mass_kg": 0.006911932735188105,
+      "center_cad_m": [
+        0.08828284261916935,
+        -2.13123718294366e-13,
+        0.1330000005127787
+      ],
+      "inertia_per_mass_cad_m2": [
+        [
+          0.0002413193662971643,
+          1.9922575717729887e-15,
+          -1.1964561286159636e-13
+        ],
+        [
+          1.9922575717729887e-15,
+          7.277731713920506e-05,
+          9.062975997873328e-16
+        ],
+        [
+          -1.1964561286159636e-13,
+          9.062975997873328e-16,
+          0.00018242664866304588
+        ]
+      ],
+      "mass_basis": "CAD hollow solid volume, estimated print fill",
+      "mass_range_kg": [
+        0.005183949551391079,
+        0.00863991591898513
+      ]
+    },
+    {
+      "id": "B08_buck_platform",
+      "volume_m3": 6.376331289220125e-06,
+      "surface_area_m2": 0.005053686168514288,
+      "solid_pla_mass_kg": 0.007906650798632954,
+      "estimated_fill_fraction": 0.8340556585644274,
+      "mass_kg": 0.006594586838892765,
+      "center_cad_m": [
+        -0.03999999997320254,
+        0.06499999966395281,
+        0.11850000000003556
+      ],
+      "inertia_per_mass_cad_m2": [
+        [
+          0.00010337631448939944,
+          3.473350079774562e-15,
+          -3.5388358909926865e-16
+        ],
+        [
+          3.473350079774562e-15,
+          0.00033230587395541343,
+          2.0209528495129803e-16
+        ],
+        [
+          -3.5388358909926865e-16,
+          2.0209528495129803e-16,
+          0.000434225816975655
+        ]
+      ],
+      "mass_basis": "CAD hollow solid volume, estimated print fill",
+      "mass_range_kg": [
+        0.004945940129169574,
+        0.007906650798632954
+      ]
+    },
+    {
+      "id": "B09_side_switch_panel_BLANK",
+      "volume_m3": 9.455720581650448e-06,
+      "surface_area_m2": 0.007009018746890201,
+      "solid_pla_mass_kg": 0.011725093521246555,
+      "estimated_fill_fraction": 0.7929971120755612,
+      "mass_kg": 0.009297965301164392,
+      "center_cad_m": [
+        9.472076347461052e-16,
+        0.0995000000000011,
+        0.08900000000000076
+      ],
+      "inertia_per_mass_cad_m2": [
+        [
+          0.0001289868336764241,
+          1.8590477645667737e-17,
+          4.891461741852708e-14
+        ],
+        [
+          1.8590477645667737e-17,
+          0.0006696211741588031,
+          2.751271432899216e-15
+        ],
+        [
+          4.891461741852708e-14,
+          2.751271432899216e-15,
+          0.0005420982418913162
+        ]
+      ],
+      "mass_basis": "CAD hollow solid volume, estimated print fill",
+      "mass_range_kg": [
+        0.0069734739758732945,
+        0.01162245662645549
+      ]
+    },
+    {
+      "id": "B10_motor_mount_FL",
+      "volume_m3": 2.6891099199541197e-05,
+      "surface_area_m2": 0.01279126082761174,
+      "solid_pla_mass_kg": 0.03334496300743108,
+      "estimated_fill_fraction": 0.5805351572338844,
+      "mass_kg": 0.01935792334247706,
+      "center_cad_m": [
+        0.09000000000173015,
+        0.088211411218158,
+        0.04722258971643927
+      ],
+      "inertia_per_mass_cad_m2": [
+        [
+          0.0003574523516047907,
+          -2.3626933742804113e-15,
+          2.7816290937288102e-14
+        ],
+        [
+          -2.3626933742804113e-15,
+          0.0005918131493084511,
+          -8.894359356710277e-05
+        ],
+        [
+          2.7816290937288102e-14,
+          -8.894359356710277e-05,
+          0.00041624468729737057
+        ]
+      ],
+      "mass_basis": "CAD hollow solid volume, estimated print fill",
+      "mass_range_kg": [
+        0.014518442506857795,
+        0.024197404178096325
+      ]
+    },
+    {
+      "id": "B10_motor_mount_FR",
+      "volume_m3": 2.689109920072279e-05,
+      "surface_area_m2": 0.012791260826055943,
+      "solid_pla_mass_kg": 0.033344963008896264,
+      "estimated_fill_fraction": 0.5805351571708793,
+      "mass_kg": 0.01935792334122675,
+      "center_cad_m": [
+        0.08999999999780467,
+        -0.08821141121885544,
+        0.047222589717404694
+      ],
+      "inertia_per_mass_cad_m2": [
+        [
+          0.0003574523516312344,
+          1.4219528332581888e-14,
+          -2.959351513842634e-14
+        ],
+        [
+          1.4219528332581888e-14,
+          0.000591813149306735,
+          8.8943593601838e-05
+        ],
+        [
+          -2.959351513842634e-14,
+          8.8943593601838e-05,
+          0.00041624468732652953
+        ]
+      ],
+      "mass_basis": "CAD hollow solid volume, estimated print fill",
+      "mass_range_kg": [
+        0.014518442505920062,
+        0.02419740417653344
+      ]
+    },
+    {
+      "id": "B10_motor_mount_RL",
+      "volume_m3": 2.6891099199542275e-05,
+      "surface_area_m2": 0.012791260827611745,
+      "solid_pla_mass_kg": 0.03334496300743242,
+      "estimated_fill_fraction": 0.5805351572338693,
+      "mass_kg": 0.019357923342477334,
+      "center_cad_m": [
+        -0.08999999999827028,
+        0.08821141121815704,
+        0.0472225897164395
+      ],
+      "inertia_per_mass_cad_m2": [
+        [
+          0.0003574523516048263,
+          -2.456368441983159e-15,
+          2.7798076340790345e-14
+        ],
+        [
+          -2.456368441983159e-15,
+          0.000591813149308314,
+          -8.89435935671071e-05
+        ],
+        [
+          2.7798076340790345e-14,
+          -8.89435935671071e-05,
+          0.0004162446872972899
+        ]
+      ],
+      "mass_basis": "CAD hollow solid volume, estimated print fill",
+      "mass_range_kg": [
+        0.014518442506858,
+        0.024197404178096668
+      ]
+    },
+    {
+      "id": "B10_motor_mount_RR",
+      "volume_m3": 2.6891099200723144e-05,
+      "surface_area_m2": 0.012791260826055943,
+      "solid_pla_mass_kg": 0.0333449630088967,
+      "estimated_fill_fraction": 0.5805351571708743,
+      "mass_kg": 0.019357923341226838,
+      "center_cad_m": [
+        -0.09000000000219713,
+        -0.0882114112188562,
+        0.04722258971740493
+      ],
+      "inertia_per_mass_cad_m2": [
+        [
+          0.00035745235163110126,
+          1.434789786980417e-14,
+          -2.962474016099392e-14
+        ],
+        [
+          1.434789786980417e-14,
+          0.0005918131493066799,
+          8.894359360180071e-05
+        ],
+        [
+          -2.962474016099392e-14,
+          8.894359360180071e-05,
+          0.00041624468732633004
+        ]
+      ],
+      "mass_basis": "CAD hollow solid volume, estimated print fill",
+      "mass_range_kg": [
+        0.014518442505920128,
+        0.024197404176533547
+      ]
+    },
+    {
+      "id": "C02_recessed_A1M8_lid_PROTOTYPE",
+      "volume_m3": 0.0001973413329906297,
+      "surface_area_m2": 0.1327060779947926,
+      "solid_pla_mass_kg": 0.24470325290838082,
+      "estimated_fill_fraction": 0.7379758045967748,
+      "mass_kg": 0.1805850799525104,
+      "center_cad_m": [
+        0.0017430478925808395,
+        -0.0028264698917065878,
+        0.14110639202718311
+      ],
+      "inertia_per_mass_cad_m2": [
+        [
+          0.004713276880619524,
+          9.399975796350891e-05,
+          -7.561247111043492e-05
+        ],
+        [
+          9.399975796350891e-05,
+          0.006409424352701366,
+          -4.815037744082095e-05
+        ],
+        [
+          -7.561247111043492e-05,
+          -4.815037744082095e-05,
+          0.010767427489850497
+        ]
+      ],
+      "mass_basis": "CAD hollow solid volume, estimated print fill",
+      "mass_range_kg": [
+        0.13543880996438282,
+        0.225731349940638
+      ]
+    },
+    {
+      "id": "C04_A1M8_rearranged_shelf_PROTOTYPE",
+      "volume_m3": 0.0001517036929099074,
+      "surface_area_m2": 0.08386519722166834,
+      "solid_pla_mass_kg": 0.18811257920828517,
+      "estimated_fill_fraction": 0.6422579074405186,
+      "mass_kg": 0.12081679148555204,
+      "center_cad_m": [
+        -0.00030983506443259403,
+        0.0006141285727109434,
+        0.11014033746890664
+      ],
+      "inertia_per_mass_cad_m2": [
+        [
+          0.00280030257031936,
+          -3.4197019088493594e-05,
+          2.7349025964776253e-06
+        ],
+        [
+          -3.4197019088493594e-05,
+          0.0037903278433650133,
+          4.999568875055621e-07
+        ],
+        [
+          2.7349025964776253e-06,
+          4.999568875055621e-07,
+          0.006586458615433133
+        ]
+      ],
+      "mass_basis": "CAD hollow solid volume, estimated print fill",
+      "mass_range_kg": [
+        0.09061259361416403,
+        0.15102098935694006
+      ]
+    },
+    {
+      "id": "C16_controller_hanger_front",
+      "volume_m3": 1.1413615241468014e-05,
+      "surface_area_m2": 0.00551767297989773,
+      "solid_pla_mass_kg": 0.014152882899420337,
+      "estimated_fill_fraction": 0.5867432264477175,
+      "mass_kg": 0.008304108175942616,
+      "center_cad_m": [
+        0.03999999999892732,
+        -0.06802695242460668,
+        0.09668584825515246
+      ],
+      "inertia_per_mass_cad_m2": [
+        [
+          0.0004223682895598338,
+          8.759052511075893e-15,
+          2.0134501704793806e-14
+        ],
+        [
+          8.759052511075893e-15,
+          0.00045884886078304725,
+          -1.7528201176948525e-05
+        ],
+        [
+          2.0134501704793806e-14,
+          -1.7528201176948525e-05,
+          6.0749280384933286e-05
+        ]
+      ],
+      "mass_basis": "CAD hollow solid volume, estimated print fill",
+      "mass_range_kg": [
+        0.006228081131956962,
+        0.010380135219928269
+      ]
+    },
+    {
+      "id": "C16_controller_hanger_rear",
+      "volume_m3": 1.141361524146799e-05,
+      "surface_area_m2": 0.005517672979897729,
+      "solid_pla_mass_kg": 0.014152882899420308,
+      "estimated_fill_fraction": 0.5867432264477184,
+      "mass_kg": 0.00830410817594261,
+      "center_cad_m": [
+        -0.03999999999928179,
+        -0.06802695242460685,
+        0.0966858482551513
+      ],
+      "inertia_per_mass_cad_m2": [
+        [
+          0.0004223682895598919,
+          -5.617034615212901e-15,
+          -1.4202614778691114e-14
+        ],
+        [
+          -5.617034615212901e-15,
+          0.0004588488607831125,
+          -1.75282011769147e-05
+        ],
+        [
+          -1.4202614778691114e-14,
+          -1.75282011769147e-05,
+          6.07492803849283e-05
+        ]
+      ],
+      "mass_basis": "CAD hollow solid volume, estimated print fill",
+      "mass_range_kg": [
+        0.006228081131956957,
+        0.010380135219928264
+      ]
+    },
+    {
+      "id": "FIT0185_-0.09_-1",
+      "mass_kg": 0.205,
+      "mass_range_kg": [
+        0.19474999999999998,
+        0.21525
+      ],
+      "center_cad_m": [
+        -0.09,
+        -0.053,
+        0.055
+      ],
+      "inertia_per_mass_cad_m2": [
+        [
+          0.0006474166666666667,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.00022816666666666667,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0006474166666666667
+        ]
+      ],
+      "mass_basis": "manufacturer nominal; COM approximated inside motor reserve",
+      "source_url": "https://www.dfrobot.com/product-633.html"
+    },
+    {
+      "id": "Hogback_-0.09_-1",
+      "mass_kg": 0.082,
+      "mass_range_kg": [
+        0.0779,
+        0.08610000000000001
+      ],
+      "center_cad_m": [
+        -0.09,
+        -0.1145,
+        0.048
+      ],
+      "inertia_per_mass_cad_m2": [
+        [
+          0.000816,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.001536,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.000816
+        ]
+      ],
+      "mass_basis": "manufacturer nominal; inertia uses bounding box approximation",
+      "source_url": "https://www.gobilda.com/hogback-traction-wheel-96mm-diameter-50a-durometer/"
+    },
+    {
+      "id": "Sonic_hub_-0.09_-1",
+      "mass_kg": 0.014,
+      "mass_range_kg": [
+        0.0133,
+        0.014700000000000001
+      ],
+      "center_cad_m": [
+        -0.09,
+        -0.1065,
+        0.048
+      ],
+      "inertia_per_mass_cad_m2": [
+        [
+          9.366666666666665e-05,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.00017066666666666665,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          9.366666666666665e-05
+        ]
+      ],
+      "mass_basis": "manufacturer nominal",
+      "source_url": "https://www.gobilda.com/1309-series-sonic-hub-6mm-bore/"
+    },
+    {
+      "id": "FIT0185_-0.09_1",
+      "mass_kg": 0.205,
+      "mass_range_kg": [
+        0.19474999999999998,
+        0.21525
+      ],
+      "center_cad_m": [
+        -0.09,
+        0.053,
+        0.055
+      ],
+      "inertia_per_mass_cad_m2": [
+        [
+          0.0006474166666666667,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.00022816666666666667,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0006474166666666667
+        ]
+      ],
+      "mass_basis": "manufacturer nominal; COM approximated inside motor reserve",
+      "source_url": "https://www.dfrobot.com/product-633.html"
+    },
+    {
+      "id": "Hogback_-0.09_1",
+      "mass_kg": 0.082,
+      "mass_range_kg": [
+        0.0779,
+        0.08610000000000001
+      ],
+      "center_cad_m": [
+        -0.09,
+        0.1145,
+        0.048
+      ],
+      "inertia_per_mass_cad_m2": [
+        [
+          0.000816,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.001536,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.000816
+        ]
+      ],
+      "mass_basis": "manufacturer nominal; inertia uses bounding box approximation",
+      "source_url": "https://www.gobilda.com/hogback-traction-wheel-96mm-diameter-50a-durometer/"
+    },
+    {
+      "id": "Sonic_hub_-0.09_1",
+      "mass_kg": 0.014,
+      "mass_range_kg": [
+        0.0133,
+        0.014700000000000001
+      ],
+      "center_cad_m": [
+        -0.09,
+        0.1065,
+        0.048
+      ],
+      "inertia_per_mass_cad_m2": [
+        [
+          9.366666666666665e-05,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.00017066666666666665,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          9.366666666666665e-05
+        ]
+      ],
+      "mass_basis": "manufacturer nominal",
+      "source_url": "https://www.gobilda.com/1309-series-sonic-hub-6mm-bore/"
+    },
+    {
+      "id": "FIT0185_0.09_-1",
+      "mass_kg": 0.205,
+      "mass_range_kg": [
+        0.19474999999999998,
+        0.21525
+      ],
+      "center_cad_m": [
+        0.09,
+        -0.053,
+        0.055
+      ],
+      "inertia_per_mass_cad_m2": [
+        [
+          0.0006474166666666667,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.00022816666666666667,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0006474166666666667
+        ]
+      ],
+      "mass_basis": "manufacturer nominal; COM approximated inside motor reserve",
+      "source_url": "https://www.dfrobot.com/product-633.html"
+    },
+    {
+      "id": "Hogback_0.09_-1",
+      "mass_kg": 0.082,
+      "mass_range_kg": [
+        0.0779,
+        0.08610000000000001
+      ],
+      "center_cad_m": [
+        0.09,
+        -0.1145,
+        0.048
+      ],
+      "inertia_per_mass_cad_m2": [
+        [
+          0.000816,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.001536,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.000816
+        ]
+      ],
+      "mass_basis": "manufacturer nominal; inertia uses bounding box approximation",
+      "source_url": "https://www.gobilda.com/hogback-traction-wheel-96mm-diameter-50a-durometer/"
+    },
+    {
+      "id": "Sonic_hub_0.09_-1",
+      "mass_kg": 0.014,
+      "mass_range_kg": [
+        0.0133,
+        0.014700000000000001
+      ],
+      "center_cad_m": [
+        0.09,
+        -0.1065,
+        0.048
+      ],
+      "inertia_per_mass_cad_m2": [
+        [
+          9.366666666666665e-05,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.00017066666666666665,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          9.366666666666665e-05
+        ]
+      ],
+      "mass_basis": "manufacturer nominal",
+      "source_url": "https://www.gobilda.com/1309-series-sonic-hub-6mm-bore/"
+    },
+    {
+      "id": "FIT0185_0.09_1",
+      "mass_kg": 0.205,
+      "mass_range_kg": [
+        0.19474999999999998,
+        0.21525
+      ],
+      "center_cad_m": [
+        0.09,
+        0.053,
+        0.055
+      ],
+      "inertia_per_mass_cad_m2": [
+        [
+          0.0006474166666666667,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.00022816666666666667,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0006474166666666667
+        ]
+      ],
+      "mass_basis": "manufacturer nominal; COM approximated inside motor reserve",
+      "source_url": "https://www.dfrobot.com/product-633.html"
+    },
+    {
+      "id": "Hogback_0.09_1",
+      "mass_kg": 0.082,
+      "mass_range_kg": [
+        0.0779,
+        0.08610000000000001
+      ],
+      "center_cad_m": [
+        0.09,
+        0.1145,
+        0.048
+      ],
+      "inertia_per_mass_cad_m2": [
+        [
+          0.000816,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.001536,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.000816
+        ]
+      ],
+      "mass_basis": "manufacturer nominal; inertia uses bounding box approximation",
+      "source_url": "https://www.gobilda.com/hogback-traction-wheel-96mm-diameter-50a-durometer/"
+    },
+    {
+      "id": "Sonic_hub_0.09_1",
+      "mass_kg": 0.014,
+      "mass_range_kg": [
+        0.0133,
+        0.014700000000000001
+      ],
+      "center_cad_m": [
+        0.09,
+        0.1065,
+        0.048
+      ],
+      "inertia_per_mass_cad_m2": [
+        [
+          9.366666666666665e-05,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.00017066666666666665,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          9.366666666666665e-05
+        ]
+      ],
+      "mass_basis": "manufacturer nominal",
+      "source_url": "https://www.gobilda.com/1309-series-sonic-hub-6mm-bore/"
+    },
+    {
+      "id": "A1M8",
+      "mass_kg": 0.17,
+      "mass_range_kg": [
+        0.15300000000000002,
+        0.18700000000000003
+      ],
+      "center_cad_m": [
+        -0.052,
+        0,
+        0.143
+      ],
+      "inertia_per_mass_cad_m2": [
+        [
+          0.0006721666666666667,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0010361666666666668,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0012041666666666668
+        ]
+      ],
+      "mass_basis": "manufacturer typical 170 g; COM is envelope estimate",
+      "source_url": "https://www.slamtec.ai/wp-content/uploads/2023/11/LD108_SLAMTEC_rplidar_datasheet_A1M8_v3.0_en.pdf"
+    },
+    {
+      "id": "Pi4",
+      "mass_kg": 0.046,
+      "mass_range_kg": [
+        0.043699999999999996,
+        0.0483
+      ],
+      "center_cad_m": [
+        0.035,
+        0.0275,
+        0.123
+      ],
+      "inertia_per_mass_cad_m2": [
+        [
+          0.0006354166666666668,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.00029466666666666666,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0008634166666666668
+        ]
+      ],
+      "mass_basis": "official Raspberry Pi magazine nominal",
+      "source_url": "https://magazine.raspberrypi.com/articles/raspberry-pi-4-specs-benchmarks/"
+    },
+    {
+      "id": "Pi_cooling_and_SD",
+      "mass_kg": 0.015,
+      "mass_range_kg": [
+        0.0075,
+        0.0225
+      ],
+      "center_cad_m": [
+        0.035,
+        0.014,
+        0.132
+      ],
+      "inertia_per_mass_cad_m2": [
+        [
+          8.908333333333332e-05,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          8.908333333333332e-05,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.00015
+        ]
+      ],
+      "mass_basis": "allowance; installed parts unknown"
+    },
+    {
+      "id": "Pi_camera_and_ribbon",
+      "mass_kg": 0.01,
+      "mass_range_kg": [
+        0.005,
+        0.015
+      ],
+      "center_cad_m": [
+        0.096,
+        0,
+        0.133
+      ],
+      "inertia_per_mass_cad_m2": [
+        [
+          0.00010008333333333333,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          8.133333333333332e-05,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          8.541666666666665e-05
+        ]
+      ],
+      "mass_basis": "allowance; camera revision and ribbon unknown"
+    },
+    {
+      "id": "Pico_with_headers",
+      "mass_kg": 0.006,
+      "mass_range_kg": [
+        0.0036,
+        0.0084
+      ],
+      "center_cad_m": [
+        0.048,
+        -0.054,
+        0.12
+      ],
+      "inertia_per_mass_cad_m2": [
+        [
+          3.975e-05,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.00021974999999999997,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0002535
+        ]
+      ],
+      "mass_basis": "allowance, weigh installed assembly"
+    },
+    {
+      "id": "controller_perfboard",
+      "mass_kg": 0.02,
+      "mass_range_kg": [
+        0.013000000000000001,
+        0.027000000000000003
+      ],
+      "center_cad_m": [
+        0,
+        -0.074,
+        0.094
+      ],
+      "inertia_per_mass_cad_m2": [
+        [
+          0.00040854666666666667,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0010833333333333333,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0006752133333333332
+        ]
+      ],
+      "mass_basis": "FR4 copper solder allowance from CAD envelope"
+    },
+    {
+      "id": "DRV8874_-0.025_0.077",
+      "mass_kg": 0.003,
+      "mass_range_kg": [
+        0.0015,
+        0.0045000000000000005
+      ],
+      "center_cad_m": [
+        -0.025,
+        -0.0792,
+        0.077
+      ],
+      "inertia_per_mass_cad_m2": [
+        [
+          3.309403333333333e-05,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          4.569883333333333e-05,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          2.6104799999999998e-05
+        ]
+      ],
+      "mass_basis": "allowance including soldered headers; not published mass",
+      "source_url": "https://www.pololu.com/product/4035"
+    },
+    {
+      "id": "DRV8874_-0.025_0.111",
+      "mass_kg": 0.003,
+      "mass_range_kg": [
+        0.0015,
+        0.0045000000000000005
+      ],
+      "center_cad_m": [
+        -0.025,
+        -0.0792,
+        0.111
+      ],
+      "inertia_per_mass_cad_m2": [
+        [
+          3.309403333333333e-05,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          4.569883333333333e-05,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          2.6104799999999998e-05
+        ]
+      ],
+      "mass_basis": "allowance including soldered headers; not published mass",
+      "source_url": "https://www.pololu.com/product/4035"
+    },
+    {
+      "id": "DRV8874_0.025_0.077",
+      "mass_kg": 0.003,
+      "mass_range_kg": [
+        0.0015,
+        0.0045000000000000005
+      ],
+      "center_cad_m": [
+        0.025,
+        -0.0792,
+        0.077
+      ],
+      "inertia_per_mass_cad_m2": [
+        [
+          3.309403333333333e-05,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          4.569883333333333e-05,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          2.6104799999999998e-05
+        ]
+      ],
+      "mass_basis": "allowance including soldered headers; not published mass",
+      "source_url": "https://www.pololu.com/product/4035"
+    },
+    {
+      "id": "DRV8874_0.025_0.111",
+      "mass_kg": 0.003,
+      "mass_range_kg": [
+        0.0015,
+        0.0045000000000000005
+      ],
+      "center_cad_m": [
+        0.025,
+        -0.0792,
+        0.111
+      ],
+      "inertia_per_mass_cad_m2": [
+        [
+          3.309403333333333e-05,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          4.569883333333333e-05,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          2.6104799999999998e-05
+        ]
+      ],
+      "mass_basis": "allowance including soldered headers; not published mass",
+      "source_url": "https://www.pololu.com/product/4035"
+    },
+    {
+      "id": "buck_with_connectors",
+      "mass_kg": 0.02,
+      "mass_range_kg": [
+        0.01,
+        0.03
+      ],
+      "center_cad_m": [
+        -0.04,
+        0.065,
+        0.124
+      ],
+      "inertia_per_mass_cad_m2": [
+        [
+          4.634083333333333e-05,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0001696875,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0001920283333333333
+        ]
+      ],
+      "mass_basis": "allowance including terminals"
+    },
+    {
+      "id": "internal_wire_fuses_switch",
+      "mass_kg": 0.11,
+      "mass_range_kg": [
+        0.060500000000000005,
+        0.1595
+      ],
+      "center_cad_m": [
+        0,
+        0,
+        0.065
+      ],
+      "inertia_per_mass_cad_m2": [
+        [
+          0.002175,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.002175,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.00375
+        ]
+      ],
+      "mass_basis": "unweighed harness/power hardware allowance"
+    },
+    {
+      "id": "fasteners_and_straps",
+      "mass_kg": 0.1,
+      "mass_range_kg": [
+        0.06,
+        0.13999999999999999
+      ],
+      "center_cad_m": [
+        0,
+        0,
+        0.08
+      ],
+      "inertia_per_mass_cad_m2": [
+        [
+          0.0032416666666666666,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.004508333333333332,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.006083333333333332
+        ]
+      ],
+      "mass_basis": "unweighed metal hardware/strap allowance; avoids counting CAD screw visuals twice"
+    }
+  ],
+  "configurations": {
+    "bench_tethered_no_battery": {
+      "selected": true,
+      "battery_purchased": false,
+      "battery_mass_kg": 0,
+      "mass_kg": 2.4938775345598283,
+      "mass_range_kg": [
+        2.0917581509198713,
+        2.8956603354498025
+      ],
+      "center_of_mass_cad_m": [
+        -0.0018773578842143472,
+        -0.00018559732858943183,
+        0.07398163370881455
+      ],
+      "inertia_tensor_cad_kg_m2": [
+        [
+          0.015888277146386322,
+          4.769792499849153e-05,
+          0.00036904532086890277
+        ],
+        [
+          4.769792499849153e-05,
+          0.019850106846054677,
+          -5.634050357679142e-05
+        ],
+        [
+          0.00036904532086890277,
+          -5.634050357679142e-05,
+          0.02799452079023536
+        ]
+      ],
+      "center_of_mass_godot_m": [
+        0.00018559732858943183,
+        0.07398163370881455,
+        0.0018773578842143472
+      ],
+      "inertia_tensor_godot_kg_m2": [
+        [
+          0.019850106846054677,
+          5.634050357679142e-05,
+          4.769792499849153e-05
+        ],
+        [
+          5.634050357679142e-05,
+          0.02799452079023536,
+          -0.00036904532086890277
+        ],
+        [
+          4.769792499849153e-05,
+          -0.00036904532086890277,
+          0.015888277146386322
+        ]
+      ],
+      "inertia_diagonal_godot_kg_m2": [
+        0.019850106846054677,
+        0.02799452079023536,
+        0.015888277146386322
+      ]
+    },
+    "bioenno_blf1206a_unselected": {
+      "selected": false,
+      "battery_purchased": false,
+      "battery_mass_kg": 0.7,
+      "battery_basis": "manufacturer metric nominal; 1.4 lb converts to .635 kg, so published units are rounded inconsistently",
+      "mass_kg": 3.193877534559828,
+      "mass_range_kg": [
+        2.726758150919871,
+        3.5956603354498022
+      ],
+      "center_of_mass_cad_m": [
+        -0.0014658986141797008,
+        -0.00014492008639501336,
+        0.07201313506472468
+      ],
+      "inertia_tensor_cad_kg_m2": [
+        [
+          0.016449046894677535,
+          4.750747819174941e-05,
+          0.0003782616359536776
+        ],
+        [
+          4.750747819174941e-05,
+          0.02085425084469048,
+          -5.5429370183656665e-05
+        ],
+        [
+          0.0003782616359536776,
+          -5.5429370183656665e-05,
+          0.02891579936273987
+        ]
+      ],
+      "center_of_mass_godot_m": [
+        0.00014492008639501336,
+        0.07201313506472468,
+        0.0014658986141797008
+      ],
+      "inertia_tensor_godot_kg_m2": [
+        [
+          0.02085425084469048,
+          5.5429370183656665e-05,
+          4.750747819174941e-05
+        ],
+        [
+          5.5429370183656665e-05,
+          0.02891579936273987,
+          -0.0003782616359536776
+        ],
+        [
+          4.750747819174941e-05,
+          -0.0003782616359536776,
+          0.016449046894677535
+        ]
+      ],
+      "inertia_diagonal_godot_kg_m2": [
+        0.02085425084469048,
+        0.02891579936273987,
+        0.016449046894677535
+      ]
+    },
+    "budget_10cell_nimh_unselected": {
+      "selected": false,
+      "battery_purchased": false,
+      "battery_mass_kg": 0.35,
+      "battery_basis": "mass-only 10-cell AA pack placeholder, estimated .28-.45 kg; no selected model, discharge/fit not verified",
+      "mass_kg": 2.843877534559828,
+      "mass_range_kg": [
+        2.371758150919871,
+        3.3456603354498022
+      ],
+      "center_of_mass_cad_m": [
+        -0.001646308814242098,
+        -0.00016275560484539046,
+        0.07066096617537707
+      ],
+      "inertia_tensor_cad_kg_m2": [
+        [
+          0.016289181751727472,
+          4.7590982317206916e-05,
+          0.0003845923563580185
+        ],
+        [
+          4.7590982317206916e-05,
+          0.02045379929440187,
+          -5.480350933689317e-05
+        ],
+        [
+          0.0003845923563580185,
+          -5.480350933689317e-05,
+          0.028499729778145244
+        ]
+      ],
+      "center_of_mass_godot_m": [
+        0.00016275560484539046,
+        0.07066096617537707,
+        0.001646308814242098
+      ],
+      "inertia_tensor_godot_kg_m2": [
+        [
+          0.02045379929440187,
+          5.480350933689317e-05,
+          4.7590982317206916e-05
+        ],
+        [
+          5.480350933689317e-05,
+          0.028499729778145244,
+          -0.0003845923563580185
+        ],
+        [
+          4.7590982317206916e-05,
+          -0.0003845923563580185,
+          0.016289181751727472
+        ]
+      ],
+      "inertia_diagonal_godot_kg_m2": [
+        0.02045379929440187,
+        0.028499729778145244,
+        0.016289181751727472
+      ]
+    }
+  },
+  "default_configuration": "bench_tethered_no_battery",
+  "geometry": {
+    "wheel_radius_m": 0.048,
+    "wheel_width_m": 0.024,
+    "wheelbase_m": 0.18,
+    "track_m": 0.229,
+    "body_size_cad_m": [
+      0.236,
+      0.196,
+      0.128
+    ],
+    "body_floor_clearance_m": 0.025,
+    "minimum_fastener_clearance_m": 0.0175,
+    "wheel_centers_cad_m": [
+      [
+        0.09,
+        0.1145,
+        0.048
+      ],
+      [
+        0.09,
+        -0.1145,
+        0.048
+      ],
+      [
+        -0.09,
+        0.1145,
+        0.048
+      ],
+      [
+        -0.09,
+        -0.1145,
+        0.048
+      ]
+    ]
+  },
+  "print_assumptions": {
+    "material": "PLA engineering assumption; physical print material must be verified",
+    "density_kg_m3": 1240,
+    "nominal_line_width_m": 0.0004,
+    "nominal_perimeters": 3,
+    "nominal_layer_height_m": 0.0002,
+    "nominal_top_bottom_layers": 5,
+    "infill_fraction": 0.2,
+    "effective_boundary_depth_m": 0.001,
+    "formula": "fill=.2+.8*min(.98,surface_area*.001/volume); mass=density*CAD_material_volume*fill",
+    "slicer_metadata_available": false,
+    "total_print_mass_kg": 0.7808775345598282
+  },
+  "motor": {
+    "count": 4,
+    "model": "DFRobot FIT0185",
+    "nominal_voltage_v": 12,
+    "gear_ratio": 131,
+    "no_load_speed_rad_s": 8.691739674931762,
+    "no_load_current_a": 0.35,
+    "published_stall_current_a": 7,
+    "published_stall_torque_nm": 4.4129925,
+    "planned_current_limit_a": 1.47,
+    "current_limit_verified_on_hardware": false,
+    "output_torque_per_amp_nm_a": 0.663607894736842,
+    "estimated_current_limited_torque_nm": 0.7432408421052631,
+    "estimated_winding_resistance_ohm": 1.7142857142857142,
+    "estimated_back_emf_at_output_v_per_rad_s": 1.3115901334320048,
+    "estimated_output_friction_torque_nm": 0.23226276315789468,
+    "estimated_drive_deadband_duty": 0.0833,
+    "estimated_effective_rotating_inertia_kg_m2": 0.0012,
+    "rotating_inertia_range_kg_m2": [
+      0.0003,
+      0.003
+    ],
+    "torque_model": "I=clamp((12*duty-Ke*omega)/R,-Ilimit,Ilimit); tau=Kt_output*I-friction*sign(omega). At near zero use stiction clamp rather than sign(0). Driver-voltage drops, thermal and inductance omitted.",
+    "brake_mode": "PH/EN brake when EN=0; SLEEP/coast separately; do not assume zero duty means coasting",
+    "gearbox_friction_note": "No-load loss already included; do not multiply another arbitrary gearbox efficiency on output torque."
+  },
+  "surfaces": {
+    "wood": {
+      "rolling_resistance_coefficient": 0.025,
+      "longitudinal_friction_coefficient": 0.75,
+      "lateral_friction_coefficient": 0.65,
+      "rolling_resistance_range": [
+        0.015,
+        0.04
+      ],
+      "longitudinal_friction_range": [
+        0.5,
+        1.0
+      ],
+      "lateral_friction_range": [
+        0.4,
+        0.9
+      ],
+      "basis": "engineering sweep estimates for clean dry floor and 50A silicone tread; NOT measured supplier values; dust/pile/load alter coefficients"
+    },
+    "tile": {
+      "rolling_resistance_coefficient": 0.02,
+      "longitudinal_friction_coefficient": 0.65,
+      "lateral_friction_coefficient": 0.55,
+      "rolling_resistance_range": [
+        0.01,
+        0.035
+      ],
+      "longitudinal_friction_range": [
+        0.35,
+        0.9
+      ],
+      "lateral_friction_range": [
+        0.3,
+        0.8
+      ],
+      "basis": "engineering sweep estimates for clean dry floor and 50A silicone tread; NOT measured supplier values; dust/pile/load alter coefficients"
+    },
+    "carpet": {
+      "rolling_resistance_coefficient": 0.08,
+      "longitudinal_friction_coefficient": 0.85,
+      "lateral_friction_coefficient": 0.75,
+      "rolling_resistance_range": [
+        0.04,
+        0.14
+      ],
+      "longitudinal_friction_range": [
+        0.5,
+        1.1
+      ],
+      "lateral_friction_range": [
+        0.4,
+        1.0
+      ],
+      "basis": "engineering sweep estimates for clean dry floor and 50A silicone tread; NOT measured supplier values; dust/pile/load alter coefficients"
+    }
+  },
+  "contact_model": {
+    "gravity_m_s2": 9.80665,
+    "restitution": 0.02,
+    "physics_hz": 120,
+    "unsupported_physics_hz": [
+      60
+    ],
+    "traction_regularization_speed_m_s": 0.02,
+    "normal_contact_stiffness_n_m_per_wheel": 2500,
+    "normal_contact_damping_n_s_m_per_wheel": 15,
+    "normal_model": "approximate tire/contact compliance, not actual suspension; use measured support contacts and clamp normal force nonnegative",
+    "friction_model": "per-wheel longitudinal and lateral slip forces; friction ellipse limits combined tangential force to mu*N; rolling resistance opposes rolling without reversing a stopped wheel",
+    "requires": [
+      "gravity and dynamic rigid-body collisions",
+      "four wheel contact patches with normal loads",
+      "motor torque applied only through contact; integrate wheel angular velocity for slip",
+      "lateral scrub in skid steering; no ideal yaw or velocity teleport",
+      "contact loss eliminates that wheel traction",
+      "body collision proxies separated from ground clearance; no full AABB filling wheel voids"
+    ],
+    "tether": "ideal slack bench supply; cable drag omitted and must be explicitly disclosed"
+  }
+}

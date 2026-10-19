@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FIELD4 bounded action v1",
+  "type": "object",
+  "required": ["action", "duration_s", "observation_seq", "expires_at_ms"],
+  "properties": {
+    "action": {"enum": ["forward", "reverse", "reverse_left", "reverse_right", "rotate_left", "rotate_right", "stop"]},
+    "duration_s": {"type": "number", "exclusiveMinimum": 0, "maximum": 1},
+    "observation_seq": {"type": "integer", "minimum": 0},
+    "expires_at_ms": {"type": "integer", "minimum": 0},
+    "reason": {"type": "string"}
+  },
+  "additionalProperties": false
+}

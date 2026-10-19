@@ -1,0 +1,216 @@
+PUBLIC TECHNICAL EDITION
+Uncommissioned engineering proposal. This is not a ready-to-wire or ready-to-power design. Electrical ratings, protection, actual component fit and calibration remain unresolved.
+
+FIELD4 hardware architecture proposal
+12 October 2026
+Design proposal. Verify hardware and unresolved items before power.
+
+
+Pi 4 + Pico: the practical first robot build
+Reusable sensing / navigation contracts, four independent drive channels, and a hardwired stop.
+Recommendation: use the Pi 4 for camera, lidar, IMU, mapping, perception and planning. Connect a Pico over USB for four closed-loop motor channels, encoder counting and local timeout handling. Leave the Zero W out of the first build.
+Four FIT0185 motors and four Pololu #4035 carriers. Use one carrier for each wheel.
+Encoder connector and signal levels; exact Pico/IMU/lidar adapter variants; physical E-stop hardware; fuse/wire ratings; current-limit verification and regenerative energy protection.
+The proposed 10 kΩ VREF resistor gives about 1.46 A peak chopping per motor at 3.3 V SLEEP. That is a test starting point, not proof of sufficient turning torque. The carrier is rated about 2.1 A continuous in the vendor’s test conditions, below the motor’s unrestricted 7 A stall current. [S1-S4]
+Start tethered at 12.0 V with the 5 A bench supply and a separate Pi supply. A battery is still unselected. A 14.6 V fully charged pack cannot be assumed safe for 12 V motors just because the drivers accept it.
+
+
+Wiring decisions and connector discipline
+Use the diagrams as functional net maps. Final harness and component selections are still required.
+
+Pi 4 sensor connections
+B0309 connects to the Pi 4 camera CSI port using the matching 15-to-15-pin ribbon. Power off before inserting it; verify cable contact orientation at both ends. Lens focus range is specified as 1.5 m to infinity, so near-field image quality needs testing. [S9]
+
+WT901: UART at a verified safe level
+Proposed header: Pi pin 1 (3.3 V) to VCC; pin 6 to GND; WT901 TX to pin 10 / GPIO15; WT901 RX to pin 8 / GPIO14. Match the actual TTL module, not a similarly named RS-232/485 unit. With motors disconnected, verify supply and TX amplitude before connecting the Pi. [S8,S10]
+
+Serial configuration
+Use an enabled hardware UART with no Linux console on those pins. Verify the actual /dev/serial0 target and Bluetooth interaction; PL011 is preferable to an unfixed mini-UART clock. Discover the IMU’s stored baud rate first, then validate the chosen output rate and checksum. [S8]
+
+Lidar: keep the vendor adapter initially
+Connect the A1M8 with its matching factory cable and USB adapter. Verify the sensor and adapter revisions. Budget scanner startup as well as rotation power; measure the complete USB load. Pi 4 permits 1.2 A total across USB ports. A powered hub, if needed, must not backfeed the Pi. [S7,S11,S12]
+
+One driver per motor
+Use the carrier VIN input, OUT1/OUT2 motor pair, and GND. Ground PMODE for PH/EN. Ground IMODE intentionally for fixed-off-time current chopping. Do not leave PMODE floating. Add a nominal 10 kΩ from VREF to GND on each carrier; keep the existing CS network intact. [S2-S4]
+
+Default-off signal chain
+3.3 V AND output is the only common SLEEP driver. Give ARM and SLEEP external 10 kΩ pulldowns; add defined fail-low RUN/WD signals and local 100 nF bypass. A watchdog trip must latch permission OFF, not periodically retry. Never feed VREF from an independent live source through the carrier’s SLEEP link. [S3,S14]
+
+Encoder level protection
+Supply encoder VCC with regulated 5 V. Buffer eight A/B lines through a 3.3 V SN74LVC541A; define both active-low OE inputs and decouple at VCC. Verify output topology before adding pull-ups. Keep motor and encoder pairs distinct; no wire colours or unverified connector cavity numbers are prescribed. [S1,S13]
+
+Feedback without defeating protection
+Join open-drain FAULT outputs with a pull-up to 3.3 V and retain individual test points. External ADC inputs require high-impedance, protected CS conditioning; loading CS changes current limiting. Do not add a large filter capacitor directly to CS. Native Pico ADC pins are not 5 V tolerant. [S4-S6]
+
+
+Control loops, messages and the simulator boundary
+Every timing below is a proposed engineering target to measure, not a Pi benchmark or safety guarantee.
+
+Pi: observation and local navigation
+Acquisition timestamps, raw sensor logs, validity and calibration IDs feed one estimator/navigation boundary. Start with 100 Hz encoder/IMU handling, 20-50 Hz local planning, and a 50 Hz motor target stream. Camera inference begins around the simulator’s 3 Hz / 640×360 budget only after an ARM-compatible runtime is demonstrated.
+
+Pico: bounded motor execution
+Use a compiled Pico SDK implementation with hardware PWM and PIO or verified interrupt encoder counting. Initial targets: 20 kHz PWM and 200 Hz wheel-speed control. Use measured elapsed time, anti-windup, acceleration limits and a zero-speed transition before reversing. Keep encoder snapshots and safety checks independent of USB parsing delays.
+
+Counts, geometry and wheel targets
+Record FL/FR/RL/RR polarity so positive means robot-forward. DFRobot’s 2096 CPR label does not establish the x1/x2/x4 software convention; measure counts per output revolution. Use measured effective radii and skid-steer track, not only CAD’s 48 mm radius / 229 mm track. Initial v±ωb/2 side targets need floor-slip calibration. [S1,S17]
+
+Timestamp discipline
+Maintain a Pi-to-Pico monotonic clock mapping with offset/uncertainty checks. Timestamp lidar beams or model sweep timing; a complete rotating scan is not instantaneous. Log data age, sequence gaps and dropped packets. Unknown space and missing data must remain distinct from clear space.
+
+Command contract over USB CDC
+Use framed binary packets (for example COBS + CRC) with protocol version, length, session/boot ID, mission epoch, monotonic sequence, four bounded wheel targets, source-observation ID and expiry. Reject malformed, repeated, out-of-session and expired commands. Accept the newest valid command only; do not queue motion.
+
+Lease and stop semantics
+Propose a maximum 100 ms motor lease. Convert sender expiry through the validated clock map; also impose a receive-age ceiling, so a delayed packet cannot renew old motion. Expiry, STOP or fault clears all targets and latches disarmed. Define and test normal brake-then-coast behavior separately from immediate E-stop/coast.
+
+No automatic return to motion
+BOOT → DISARMED → explicit ARM with zero targets → RUN. Any E-stop/watchdog fault forces latched STOP. Clear old commands, check hardware RUN feedback, require deliberate physical reset plus a fresh software session/arm. Watchdog service happens only after successful control-loop checks and output updates.
+
+What v07.3 can actually reuse
+Python perception is reusable in principle; Linux ARM dependencies and Pi thermals/latency remain unvalidated. Mapping, mission and planner modules are still GDScript, with simulated hardware calls in main.gd. Extract adapters and use replay parity tests before choosing headless Godot versus a port. No drop-in Pi firmware exists in this patch.
+
+
+Proposed component set
+This list describes the technical design basis, not ownership, purchases, or commissioning.
+
+Pi 4; original Pico (variant to confirm); optional Pi Zero W; Arducam B0309; RPLIDAR A1M8; WT901 TTL; current-limited 12 V bench supply and separate Pi supply. Confirm board variants, RAM/cooling, sensor cables/adapters, supply rating and connectors.
+
+Four FIT0185 motors, four Pololu DRV8874 #4035 carriers, four 96 mm 50A Hogback wheels and four Sonic 6 mm hubs. Verify quantities, shaft/clamp fit and mounting requirements on real parts.
+
+Known mechanical reference
+Existing FIELD4 recessed-A1M8 v0.2 CAD is the geometry basis. The current physics file labels mass, friction and torque/current values as uncalibrated estimates. Check harness clearance, strain relief, cooling, centre of mass and rigid sensor mounts on the printed assembly.
+
+Battery / portable power
+No final design selected. Retain a reviewed bench configuration until motor loads, bus transients and runtime requirements are measured. Battery chemistry, BMS limits, charger, fuse, enclosure and portable regulators are a later matched design decision.
+
+Required before powered motor testing
+Latching NC E-stop; DC-rated contactor/relay with manual-reset circuit; properly fused distribution and return wiring; reverse-polarity input protection; load-side bulk/overvoltage energy protection; rated connectors and secure motor mount. Values and exact products remain to be engineered.
+
+Required signal components
+1 × 8-channel SN74LVC541A buffer or verified equivalent; 1 × SN74LVC1G11 gate; independent watchdog/POR plus fault latch; 4 × 10 kΩ VREF resistors (proposal); pulldowns/pull-ups and decoupling. Breakout/package pin maps must be checked before assembly. [S13,S14]
+
+Power, sensing and protection details
+Regulated protected 5 V encoder rail; bus-voltage divider/protection; a high-impedance 4-channel current-sense ADC front end for per-wheel telemetry; suitable logic rail protection. Reserve Pico GP20/21 for I2C and GP26 for bus voltage. The exact ADC and analogue component values remain open.
+
+Tools and conditional additions
+DMM plus oscilloscope with suitably rated probes; logic analyser optional; current measurement; infrared/contact temperature measurement; secure wheel-off-ground fixture. Add a non-backfeeding powered USB hub only if measured startup demand requires it. Bumpers and drop-off/body-height obstacle sensing may be required for floor autonomy.
+
+
+Staged bench bring-up with explicit go/no-go gates
+Progress by observed evidence. Keep people, pets, loose clothing and fragile items away from moving parts.
+
+1  Identify and inspect - everything off
+Photograph board labels, connectors and wiring orientation. Confirm continuity, no shorts, motor-versus-encoder pairs and power polarity. Read exact pinouts and match the harness. Verify fuses protect the chosen wire and connectors. Do not use solderless breadboard paths for motor current.
+
+2  Logic and sensors only
+Leave motor VIN disconnected. Boot Pi and Pico, enumerate camera/lidar/IMU, and record raw streams. Confirm encoder rail separately and scope A/B through the buffer while turning each shaft safely. Measure the actual counter convention, polarity, stopped noise and missed/invalid transitions.
+
+3  Prove default-off hardware
+With outputs observed and no motors attached, cycle USB, Pi, Pico and motor supplies in different orders. Exercise boot, reset, unplugged USB, malformed/replayed packets, frozen control loop, E-stop wire break and brownout. No case may cause an unintended SLEEP high or automatic re-arm.
+
+4  One motor, securely restrained
+Set the supply to 12.0 V with a conservative current ceiling, initially one wheel off the ground. Verify direction, encoder signs, speed loop and the actual hardware trip threshold. Inspect motor/driver temperature. Stop if current limit, supply foldback, noise or oscillation makes behavior unclear.
+
+5  Capture energy and stopping behavior
+Scope the motor bus during low-speed deceleration, reversal, lease expiry and E-stop. Confirm the independent clamp protects with the source disconnected. Measure brake and coast response separately. Do not hand-stall a shaft or hold a motor against its unrestricted stall current.
+
+6  Four channels on the stand
+Repeat current/thermal checks for every carrier. Exercise all wheels and USB/sensor startup together while staying within the 5 A supply envelope. Verify that noise does not create false counts, resets, invalid IMU packets or undervoltage. Record the summed input current separately from winding current.
+
+7  Slow, supervised floor test
+Proceed only after hardware stop, fuse/energy protection and stop distances pass. Begin at approximately 0.05 m/s in a clear, level, bounded area with E-stop in hand. Test straight driving and gradual turns before pivoting; skid-steer turning can demand much more current. No stairs or unattended people-following.
+
+8  Transfer evidence back into software
+Replay recorded sensors against the same estimator/planner. Calibrate wheel radii/track, camera/lidar mounts, delay, IMU bias and drive limits. Benchmark sustained perception under thermal load. Re-run Stop, stale-data and recovery regressions, then assess extra obstacle/drop-off sensors before broader autonomy.
+
+
+Power sizing and stopping: remaining engineering work
+The current packet proposes the architecture; it deliberately does not guess a battery, fuse, wire gauge or relay rating.
+
+The 5 A supply is a staging tool
+Four unrestricted 7 A stalls imply 28 A, which the bench supply cannot provide. Four proposed 1.46 A winding-current limits sum to roughly 5.8 A; supply current differs with PWM and can exceed 5 A at high duty. Supply foldback is not a substitute for per-wheel current limits or a validated stop.
+
+12 V versus 14.6 V
+A 14.6 V pack is 21.7% above the motor nominal voltage. A 12/14.6 ≈ 82% PWM ceiling is only a first-order average-voltage idea; it does not prove safe startup, heating, transient or fault behavior. Do not connect such a pack directly under this proposal.
+
+Portable rail decision
+Either select a motor/source pairing with confirmed voltage compatibility, or engineer a regulated motor rail for the battery’s complete range and regenerative behavior. A normal step-down regulator may lose regulation near low battery voltage and may be unable to absorb braking energy. Battery charging is a separate controlled system.
+
+Protection is an energy calculation
+Fuse choice depends on load profiles, fault current, wire/connector ampacity and breaking capacity. Put bypass/bulk at each driver after its fuse. Size local and common energy sinks for braking and an opened branch fuse that isolates a driver. Capacitor headroom is ½C(Vmax² - Vinitial²); it is finite. [S15,S16]
+
+Source cut does not remove all energy
+Motor inductance, rotating wheels and bus capacitors remain after K1 opens. Keep protective energy absorption on the driver side of K1. A full battery, BMS cutoff, reverse-blocking device or non-regenerative supply can remove the intended energy return path. Do not assume a TVS handles repeated braking. [S15,S16]
+
+Fail-low logic is necessary but insufficient
+GPIO reset states, input pulls and an independent watchdog reduce failure modes but do not make a safety-rated controller. Watchdog failure must latch OFF. The contactor must be DC-rated and manually reset; its coil suppression affects release time. No MCU GPIO may switch the coil directly. [S14,S18]
+
+Ground and power sequencing
+Route high-current motor loops separately from low-level encoder/IMU wiring. Provide a common low-impedance reference at distribution, with individual motor returns. USB supplies add ground paths; inspect bench earth bonding before using grounded test instruments. Do not disconnect protective earth or parallel independent 5 V sources.
+
+What closes the design
+Record actual robot/payload mass, sustained and turning current, temperatures, USB load and worst observed bus overshoot. Then select and document fuse curves, connector/wire ratings, contactor/latch/watchdog, regulator, ADC protection and energy sink. Have the completed harness reviewed before floor operation.
+
+
+Source register
+Primary manufacturer documentation checked 12 Oct 2026. Links are clickable.
+S1 DFRobot FIT0185 motor specification
+https://wiki.dfrobot.com/fit0185/
+12 V motor; 7 A stall; 5 V Hall encoder supply; manufacturer CPR label.
+S2 Pololu #4035 carrier
+https://www.pololu.com/product/4035
+Carrier current capability, interfaces and thermal limits; use detailed #4035 section.
+S3 Pololu carrier schematic
+https://www.pololu.com/file/0J1862/drv887x-single-brushed-dc-motor-driver-carrier-schematic.pdf
+10 kΩ SLEEP-to-VREF and 2.49 kΩ CS network; actual board nets.
+S4 Texas Instruments DRV8874 datasheet
+https://www.ti.com/lit/ds/symlink/drv8874.pdf
+PH/EN, IMODE, nSLEEP, current regulation, fault behavior and analogue sensing.
+S5 Raspberry Pi Pico original pinout
+https://datasheets.raspberrypi.com/pico/Pico-R3-A4-Pinout.pdf
+Physical header pins and GPIO functions; independently visually checked.
+S6 Raspberry Pi Pico documentation
+https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html
+Board variants, 3.3 V logic, GPIO/ADC and power constraints.
+S7 Raspberry Pi hardware / power
+https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#power-supply
+Pi 4 recommended supply and combined USB power allowance.
+S8 Raspberry Pi UART configuration
+https://www.raspberrypi.com/documentation/computers/configuration.html#configure-uarts
+3.3 V UART warning, header pins and console/Bluetooth configuration.
+S9 Arducam B0309 / IMX708 family
+https://docs.arducam.com/Raspberry-Pi-Camera/Native-camera/12MP-IMX708/
+Exact camera SKU, CSI-2, fixed focus, focus distance and field of view.
+
+
+Source register / continued
+Primary manufacturer documentation checked 12 Oct 2026. Links are clickable.
+S10 WitMotion WT901 current manual
+https://cdn.shopify.com/s/files/1/0601/1712/3269/files/WT901_Manual.pdf?v=1770278406
+Manufacturer-linked manual V250806: supply, TTL serial, rates and pin names.
+S11 SLAMTEC A1 official specification
+https://www.slamtec.com/en/lidar/a1spec
+A1 5 V system and serial interface; confirm actual sensor revision.
+S12 SLAMTEC official documents / SDK
+https://www.slamtec.com/en/support
+A1M8 datasheet and development-kit manual links; use matching adapter revision.
+S13 TI SN74LVC541A buffer
+https://www.ti.com/product/SN74LVC541A
+5.5 V-tolerant inputs at 3.3 V VCC; Ioff; two output-enable inputs.
+S14 TI SN74LVC1G11 AND gate
+https://www.ti.com/product/SN74LVC1G11
+3-input gate, 3.3 V operation and partial-power-down behavior.
+S15 TI motor-drive regeneration discussion
+https://www.ti.com/lit/pdf/ssztch8
+Supply pumping and returning motor energy.
+S16 TI motor-driver braking-circuit guidance
+https://www.ti.com/lit/an/slvaf66/slvaf66.pdf
+Braking energy and protective circuit design.
+S17 DFRobot encoder example
+https://wiki.dfrobot.com/fit0185/docs/24358
+Example counts A CHANGE; does not resolve full decoder CPR conversion.
+S18 Pilz E-stop restart explanation
+https://www.pilz.com/en-INT/support/faq/standards/articles/180045
+Reset must not itself restart machinery; design principle, not certification.
+Technical basis: experimental v07.3 portability, compute-profile and IMU design notes, uncalibrated physics estimates, and recessed-A1M8 v0.2 CAD.

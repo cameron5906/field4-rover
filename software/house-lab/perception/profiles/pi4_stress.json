@@ -1,0 +1,17 @@
+{
+  "name": "pi4_stress",
+  "description": "Synthetic contention and slow-service scenario; not a thermal or hardware model",
+  "inference_rate_hz": 2.0,
+  "object_every_n_frames": 2,
+  "pose_every_n_frames": 1,
+  "minimum_processing_ms": 450.0,
+  "delay_jitter_ms": 150.0,
+  "contention_every_n_frames": 8,
+  "contention_delay_ms": 250.0,
+  "threads": 1,
+  "affinity_cores": 1,
+  "max_input_width": 320,
+  "max_input_height": 180,
+  "random_seed": 4,
+  "calibration_evidence": null
+}
